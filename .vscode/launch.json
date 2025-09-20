@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Debug mcp-client-agent.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/linkedin_agent/mcp-client-agent.py",
+            "python": "${workspaceFolder}/.ai-venv/bin/python",
+            "envFile": "${workspaceFolder}/.env",
+            "console": "integratedTerminal"
+        }
+    ]
+}

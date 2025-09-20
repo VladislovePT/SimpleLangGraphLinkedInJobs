@@ -1,0 +1,41 @@
+{
+  "linkedin-mcp": [
+    {
+      "name": "close_session",
+      "description": "Close the current browser session and clean up resources.",
+      "restricted": false
+    },
+    {
+      "name": "get_company_profile",
+      "description": "Get a specific company's LinkedIn profile.",
+      "restricted": true
+    },
+    {
+      "name": "get_job_details",
+      "description": "Get job details for a specific job posting on LinkedIn",
+      "restricted": true
+    },
+    {
+      "name": "get_person_profile",
+      "description": "Get a specific person's LinkedIn profile.",
+      "restricted": true
+    },
+    {
+      "name": "get_recommended_jobs",
+      "description": "Get your personalized recommended jobs from LinkedIn",
+      "restricted": true
+    },
+    {
+      "name": "search_jobs",
+      "description": "Search for jobs on LinkedIn using a search term.",
+      "restricted": false
+    }
+  ],
+  "tavily-mcp": [
+    {
+      "name": "search_company",
+      "description": "Search Tavily for information about a company.",
+      "restricted": false
+    }
+  ]
+}

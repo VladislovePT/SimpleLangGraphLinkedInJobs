@@ -1,0 +1,34 @@
+{
+  "Programming & Scripting": ["Python", "C#", "JavaScript", "Java", "SQL", "KQL", "Bash", "Shell"],
+  "Frameworks & APIs": ["FastAPI", ".NET", "Node.js", "REST", "GraphQL", "CefSharp"],
+  "Databases": ["MySQL", "SQL Databases", "CosmosDB", "Qdrant"],
+  "Cloud & DevOps": [
+    "Azure", "Azure Storage", "Function Apps", "Logic Apps", "Container Apps", "Application Insights", "Azure Data Explorer",
+    "Power BI", "Power Automate", "Azure DevOps",
+    "Azure Resource Manager", "ARM Templates", "Monitoring", "CI/CD"
+  ],
+  "AI / ML Tools": ["Semantic Kernel", "LangChain", "LangGraph", "LangSmith", "AI Foundry"],
+  "Azure AI Services": [
+    "Cognitive Services", "OpenAI", "AI Search", "Vision", "Speech", "Document Intelligence",
+    "Bot Framework", "Bot Service", "AI Inference SDK",
+    "Azure Machine Learning", "Knowledge Mining", "Language Understanding (LUIS)", "Conversational AI"
+  ],
+  "Azure IoT": [
+    "IoT Hub", "Device Provisioning Service", "IoT Edge", "Event Hub", "Event Grid", "Stream Analytics"
+  ],
+  "IoT Protocols": ["AMQP", "MQTT", "Modbus"],
+  "Automation & Workflow": ["n8n", "workflow automation", "diagnostic tools", "self-healing workflows"],
+  "Research & Algorithms": ["A* pathfinding", "Genetic Algorithms", "KNN", "K-Means", "Clustering"],
+  "Cybersecurity & Forensics": ["Cybersecurity", "Computer Forensics", "OSINT", "information gathering", "reporting", "modular architecture", "threat intelligence"],
+  "Certifications (Microsoft)": [
+    "AI-102: Azure AI Engineer Associate (Azure AI solutions, Conversational AI, Cognitive Services, Bot Framework, AI integration)",
+    "AZ-204: Azure Developer Associate (Azure Functions, Logic Apps, App Services, Azure SDKs, Event-based solutions, API management)",
+    "AZ-900: Azure Fundamentals (cloud concepts, core Azure services, governance, compliance, cost management)",
+    "AI-900: Azure AI Fundamentals (ML concepts, AI workloads, Responsible AI, Cognitive Services)",
+    "DP-900: Azure Data Fundamentals (relational data, non-relational data, data analytics, CosmosDB, SQL Server, Synapse)"
+  ],
+  "Academics": [
+    "Bachelor’s in Computer Science (Institute of Technology and Management, 2015–2019) — foundation in software engineering, programming, databases, and computer systems.",
+    "Master’s in Cybersecurity and Computer Forensics (Institute of Technology and Management, 2019–2021) — specialization in digital forensics, threat intelligence, OSINT tooling, and secure system design."
+  ]
+}
