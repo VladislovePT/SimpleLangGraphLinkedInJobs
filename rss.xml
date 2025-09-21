@@ -1,325 +1,373 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>urn:uuid:91194e33-a08c-4c86-bd96-21b5c800e6f9</id>
+  <id>urn:uuid:1eae2eda-6530-4366-90cc-ca65ddbe1769</id>
   <title>LinkedIn Job Analysis RSS Feed</title>
-  <updated>2025-09-21T16:24:43.837824+00:00</updated>
+  <updated>2025-09-21T16:40:32.307863+00:00</updated>
   <link href="http://localhost:5000/rss" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>http://localhost:5000/fluff/logo.png</logo>
   <subtitle>An RSS feed of job analysis from the LinkedIn agent.</subtitle>
   <entry>
-    <id>urn:uuid:43fae5c8-5332-4dc0-956d-4056e9b0a0e0</id>
-    <title>Technical HubSpot Consultant (m/f/d)
-Technical HubSpot Consultant (m/f/d)</title>
-    <updated>2025-09-21T16:24:43.838142+00:00</updated>
+    <id>urn:uuid:18541724-ddc7-4e73-ad31-4fc06109a177</id>
+    <title>AI Platform Engineer
+AI Platform Engineer with verification</title>
+    <updated>2025-09-21T16:40:32.308204+00:00</updated>
     <content>&lt;div style="border: 1px solid #ddd; border-radius: 8px; margin: 16px 0; padding: 16px; font-family: sans-serif; line-height: 1.6;"&gt;
     
-    &lt;!-- HEADER: Company and Job Title --&gt;
     &lt;h2 style="margin-top: 0; margin-bottom: 8px; font-size: 1.4em;"&gt;
-        🏢 Thorit — Technical HubSpot Consultant (m/f/d)
+        🏢 Ferring Pharmaceuticals — AI Platform Engineer
     &lt;/h2&gt;
     
-    &lt;!-- METADATA: Location, Work Type, Salary --&gt;
     &lt;div style="font-size: 0.9em; color: #555; margin-bottom: 16px;"&gt;
-        &lt;span&gt;📍 Lisbon, Portugal&lt;/span&gt; | 
-        &lt;span&gt;🔄 Hybrid&lt;/span&gt; | 
+        &lt;span&gt;📍 Lisbon, Lisbon, Portugal&lt;/span&gt; |
+        &lt;span&gt;🔄 Hybrid&lt;/span&gt; |
         &lt;span&gt;💰 Not specified&lt;/span&gt;
     &lt;/div&gt;
 
-    &lt;!-- FIT ASSESSMENT: Colored box for emphasis --&gt;
     &lt;div style="border-radius: 4px; padding: 12px; margin-bottom: 16px; background-color: #e8f5e9; color: #2e7d32;"&gt;
         &lt;strong style="font-size: 1.1em;"&gt;✅ Fit: Strong&lt;/strong&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate has extensive experience in programming with &lt;strong&gt;Python&lt;/strong&gt;, &lt;strong&gt;C#&lt;/strong&gt;, &lt;strong&gt;JavaScript&lt;/strong&gt;, and knowledge of &lt;strong&gt;SQL&lt;/strong&gt;. Additionally, skills in &lt;strong&gt;REST&lt;/strong&gt; and automation align well with the role’s requirements for technical implementation and integration.&lt;/p&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The profile demonstrates a strong match with the job requirements, particularly in &lt;strong&gt;Python&lt;/strong&gt;, &lt;strong&gt;SQL&lt;/strong&gt;, and experience in &lt;strong&gt;CI/CD&lt;/strong&gt; processes.&lt;/p&gt;
     &lt;/div&gt;
 
-    &lt;!-- DETAILS: Skills analysis using badges --&gt;
     &lt;div&gt;
-        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt; 
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Python&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;JavaScript&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;SQL&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;REST&lt;/span&gt;
-        &lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt; 
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;HubSpot&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;API connections&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;HTML&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;CSS&lt;/span&gt;
-        &lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The role requires extensive knowledge of &lt;strong&gt;HubSpot&lt;/strong&gt; and experience with various &lt;strong&gt;CRM&lt;/strong&gt; systems, which the candidate lacks but has a strong framework in product implementation and automation.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;Python:&lt;/strong&gt; Profile shows extensive experience, required for AI solutions.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;SQL:&lt;/strong&gt; Necessary for data operations, well-matched with candidate's expertise.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;CI/CD:&lt;/strong&gt; Experience with &lt;strong&gt;DevOps&lt;/strong&gt; practices aligns with job requirements.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Profile includes knowledge of &lt;strong&gt;Azure&lt;/strong&gt; cloud services, essential for the role.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;FastAPI:&lt;/strong&gt; Relevant for the job's requirement of web development frameworks.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Machine Learning:&lt;/strong&gt; Proven experience in delivering ML projects meets job expectations.&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;Databricks:&lt;/strong&gt; Specific experience with the Databricks ecosystem was not mentioned in the profile.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;TensorFlow:&lt;/strong&gt; Experience with AI frameworks like TensorFlow is noted as preferable by the job.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Containerization:&lt;/strong&gt; Familiarity with &lt;strong&gt;Docker&lt;/strong&gt; or &lt;strong&gt;Kubernetes&lt;/strong&gt; was not specified.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;IaC Tools:&lt;/strong&gt; Not mentioned in the profile, while experience with tools like &lt;strong&gt;Terraform&lt;/strong&gt; is a plus.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The candidate has strong qualifications, but additional experience with specific AI frameworks and tools would strengthen their fit for this role.&lt;/p&gt;
     &lt;/div&gt;
 
-    &lt;!-- FOOTER: Consultancy, Company Info, Profile Link --&gt;
     &lt;div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 16px; font-size: 0.9em; color: #555;"&gt;
-        &lt;p style="margin: 0 0 8px 0;"&gt;&lt;strong&gt;Consultancy Check:&lt;/strong&gt; 🚨 Suspected&lt;/p&gt;
-        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About Thorit:&lt;/strong&gt; Thorit GmbH is a German technology company that operates in multiple sectors including IT services and consulting, advertising and marketing, and software development. The company combines their expertise across IT infrastructure, marketing technology, and custom software development to serve their clients' digital transformation needs.&lt;/p&gt;
+        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About Ferring Pharmaceuticals:&lt;/strong&gt; Ferring Pharmaceuticals is a Swiss multinational biopharmaceutical company that specializes in reproductive health, maternal health, gastroenterology, and urology. The company was founded in 1950 and focuses on developing treatments and therapies in its core therapeutic areas.&lt;/p&gt;
         &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="Not specified"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</content>
     <link href="http://localhost:5000/rss"/>
-    <published>2025-09-21T17:24:43.838155+00:00</published>
+    <published>2025-09-21T17:40:32.308217+00:00</published>
   </entry>
   <entry>
-    <id>urn:uuid:99f41a1b-3511-4506-84db-97f859381923</id>
-    <title>Artificial Intelligence Engineer
-Artificial Intelligence Engineer</title>
-    <updated>2025-09-21T16:24:43.838125+00:00</updated>
-    <content>&lt;div style="border: 1px solid #ddd; border-radius: 8px; margin: 16px 0; padding: 16px; font-family: sans-serif; line-height: 1.6;"&gt;
-    
-    &lt;h2 style="margin-top: 0; margin-bottom: 8px; font-size: 1.4em;"&gt;
-        🏢 METRICA Portugal — Artificial Intelligence Engineer
-    &lt;/h2&gt;
-    
-    &lt;div style="font-size: 0.9em; color: #555; margin-bottom: 16px;"&gt;
-        &lt;span&gt;📍 Lisbon, Portugal (Hybrid)&lt;/span&gt; | 
-        &lt;span&gt;🔄 Hybrid – 3 days onsite&lt;/span&gt; | 
-        &lt;span&gt;💰 Not specified&lt;/span&gt;
-    &lt;/div&gt;
-
-    &lt;div style="border-radius: 4px; padding: 12px; margin-bottom: 16px; background-color: #e8f5e9; color: #2e7d32;"&gt;
-        &lt;strong style="font-size: 1.1em;"&gt;✅ Fit: Strong&lt;/strong&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate's expertise in &lt;strong&gt;Python&lt;/strong&gt;, along with their experience in &lt;strong&gt;AI/ML&lt;/strong&gt; tools and familiarity with &lt;strong&gt;Azure&lt;/strong&gt;, aligns well with the job's requirements.&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div&gt;
-        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Python&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Azure&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Cognitive Services&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;AI/ML&lt;/span&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;TensorFlow&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;PyTorch&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;scikit-learn&lt;/span&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The candidate holds a Bachelor's in Computer Science and a Master's in Cybersecurity, showing a strong educational background relevant to AI development.&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 16px; font-size: 0.9em; color: #555;"&gt;
-        &lt;p style="margin: 0 0 8px 0;"&gt;&lt;strong&gt;Consultancy Check:&lt;/strong&gt; ✅ Not Consultancy&lt;/p&gt;
-        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About METRICA Portugal:&lt;/strong&gt; METRICA Portugal is part of Métrica, an IT consulting company that operates with a commitment to the information society and technological development. The company focuses on continuous growth and positions itself as a technology consulting firm that serves clients in the digital transformation space, helping organizations navigate technological challenges and implement digital strategies for business advancement.&lt;/p&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="https://www.linkedin.com/jobs/view/4293183823/?eBP=CwEAAAGZbRWgF6HBehq5xDP1diQOQ45LY8L5aNm4ega0dYCnIG4UKTss_3FWsN4yjsgpNduXcBTIl8SC7fuyBmRxBuc4T_PlqH-cD5HhxnK4Iy77p4U2w66eX7LR1V6qxh71Cf67ufw9Qv_KXKG-VjeTDM_UAxbC1DJrB7V72EBTT9PEyxgI5-_J3Qb-DsU_ZYtAuVpWxcvGtRsiCR722dCzubmZfvtJDdNDItH9JYXBEvRB2iCr495C_4QsRN1Y8-d6QAhGVZDmjPkCzbmPJVUV8-m_maUoB9i8OUCTLpu7u3L5ZKBRclT9Mzx6PmbCURRxD8trfumDGjJj9jJI_goFjxzQ1XWjlDpQyG42NodYIVR1LaLHH06FeIrt6hsNv4Ut69YbE4rv6Dc6XdUa3fuEjLhVV7KTQ2cciFGS3yea0h8k_NE5nHPE_6OX2O6qhXteRkC-2mlowwGKLl4tJcw-FkQ3DaKpGycERZ8OJ4ZV1RAMmwAJ0djwWHsgm8IYkZWHDtFOF1o&amp;refId=%2BTyuzudK2D1J2LYyBnrLGw%3D%3D&amp;trackingId=%2BggCHJ%2BVofAEAXhQmWmPwg%3D%3D&amp;trk=flagship3_search_srp_jobs"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</content>
-    <link href="http://localhost:5000/rss"/>
-    <published>2025-09-21T17:24:43.838138+00:00</published>
-  </entry>
-  <entry>
-    <id>urn:uuid:d4557220-2577-4c30-9e75-5c64a0b561dc</id>
-    <title>AI Engineer
-AI Engineer with verification</title>
-    <updated>2025-09-21T16:24:43.838107+00:00</updated>
+    <id>urn:uuid:615081a9-1593-4216-947c-e4b01b7def06</id>
+    <title>Senior AI Engineer
+Senior AI Engineer</title>
+    <updated>2025-09-21T16:40:32.308189+00:00</updated>
     <content>&lt;div style="border: 1px solid #ddd; border-radius: 8px; margin: 16px 0; padding: 16px; font-family: sans-serif; line-height: 1.6;"&gt;
     
     &lt;!-- HEADER: Company and Job Title --&gt;
     &lt;h2 style="margin-top: 0; margin-bottom: 8px; font-size: 1.4em;"&gt;
-        🏢 IDW — AI Engineer&lt;br&gt;AI Engineer with verification
+        🏢 Smart Consulting — Senior AI Engineer
     &lt;/h2&gt;
     
     &lt;!-- METADATA: Location, Work Type, Salary --&gt;
     &lt;div style="font-size: 0.9em; color: #555; margin-bottom: 16px;"&gt;
-        &lt;span&gt;📍 Lisbon, Portugal&lt;/span&gt; | 
-        &lt;span&gt;🔄 Hybrid&lt;/span&gt; | 
+        &lt;span&gt;📍 Braga, Portugal&lt;/span&gt; |
+        &lt;span&gt;🔄 Hybrid&lt;/span&gt; |
         &lt;span&gt;💰 Not specified&lt;/span&gt;
     &lt;/div&gt;
 
     &lt;!-- FIT ASSESSMENT: Colored box for emphasis --&gt;
-    &lt;div style="border-radius: 4px; padding: 12px; margin-bottom: 16px; background-color: #e8f5e9; color: #2e7d32;"&gt;
-        &lt;strong style="font-size: 1.1em;"&gt;✅ Fit: Strong&lt;/strong&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate possesses extensive experience with &lt;strong&gt;Python&lt;/strong&gt;, AI/ML tools, and &lt;strong&gt;Azure&lt;/strong&gt; services. The alignment with requirements for developing &lt;strong&gt;GenAI&lt;/strong&gt; solutions and experience in &lt;strong&gt;APIs&lt;/strong&gt; further strengthens the fit.&lt;/p&gt;
+    &lt;div style="border-radius: 4px; padding: 12px; margin-bottom: 16px; background-color: #fff3e0; color: #f57c00;"&gt;
+        &lt;strong style="font-size: 1.1em;"&gt;⚖️ Fit: Medium&lt;/strong&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate possesses relevant skills in &lt;strong&gt;Python&lt;/strong&gt; and &lt;strong&gt;SQL&lt;/strong&gt;, but lacks experience with Google Cloud Platform and Apache Airflow which are essential for the role.&lt;/p&gt;
     &lt;/div&gt;
 
-    &lt;!-- DETAILS: Skills analysis using badges --&gt;
+    &lt;!-- DETAILS: Skills analysis --&gt;
     &lt;div&gt;
-        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt; 
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Python&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;AI/ML&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;GenAI&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;APIs&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Azure&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;CI/CD&lt;/span&gt;
-        &lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt; 
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Docker&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Kubernetes&lt;/span&gt;
-        &lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The candidate's background in &lt;strong&gt;Cognitive Services&lt;/strong&gt; and experience with machine learning algorithms complements the job's requirements, making them a strong contender for the &lt;strong&gt;AI Engineer&lt;/strong&gt; position.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;Python:&lt;/strong&gt; Profile shows proficiency and is required for developing data pipelines.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;SQL:&lt;/strong&gt; Relevant for writing optimized queries as per job requirements.&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;Google Cloud Platform (GCP):&lt;/strong&gt; The job requires proficiency in GCP, which is not mentioned in the profile.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Apache Airflow / Cloud Composer:&lt;/strong&gt; Essential for developing and maintaining workflows, and not found in the profile.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;English Proficiency (B2 level):&lt;/strong&gt; Required for effective communication, not specified in the profile.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The candidate’s experience in cloud services mostly revolves around &lt;strong&gt;Azure&lt;/strong&gt; technologies, which may not directly translate to GCP capabilities.&lt;/p&gt;
     &lt;/div&gt;
 
     &lt;!-- FOOTER: Consultancy, Company Info, Profile Link --&gt;
     &lt;div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 16px; font-size: 0.9em; color: #555;"&gt;
-        &lt;p style="margin: 0 0 8px 0;"&gt;&lt;strong&gt;Consultancy Check:&lt;/strong&gt; ✅ Not Consultancy&lt;/p&gt;
-        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About IDW:&lt;/strong&gt; IDW Publishing, which stands for Idea and Design Works, LLC, is an American comic book publisher that specializes in transforming various properties from other media into comic book format. They focus on creating adaptations based on popular franchises.&lt;/p&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="https://www.linkedin.com/jobs/view/4291897926/?eBP=CwEAAAGZbRWgF1qOSVxy18nMly9ZPU13XpDdnrubzxXJoMAtL3h4k3bKT6WLx7oWdQfRfE4Z5DuVzG4B1yh8AJArIxttku5lUQa4sgsRG4MSDPcz1AL8QeSS3z8k1-XGYHFnXRHErOS0vs0dDpMvoeaMPVGirBiOgGIWVZhi8AKhFSthYM8MjmWidGg718cGd8GluKw7fLjx8RTZMiAKVhQshmbUokOxSv8AMkStraYygE_IIZjzSDp85ULOvyHtzGcxU0hkm2HoAXDGx27okWJQy7fLe39_WWXxPwq5zPVLNuD4_4a3af1oxcuLbninHwpT46227Z6lWwvlnZUWP0YXkUBPDEkQCSlZkHsU36lYMZMaSzhtF5GBY41kugfV1BxnR8QvGId_tMo-Jq_LX_m8Tgk_qebteyjpXex8yU-ax6tQCqZIenU0iSG5feRe9LawTeIxfMLqblSlKYwhLUvy_cCbxdR8iQRi6vSiBmVLJaP7A2PL1Df6AYTMdfDZVQSiDegqTRk&amp;refId=%2BTyuzudK2D1J2LYyBnrLGw%3D%3D&amp;trackingId=Smgul6RExJdJKkMBhpnj%2Bg%3D%3D&amp;trk=flagship3_search_srp_jobs"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
+        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About Smart Consulting:&lt;/strong&gt; Smart Consulting is an independent consulting company that specializes in Smart Card environments, with a focus on providing services and solutions related to &lt;strong&gt;smart card technology&lt;/strong&gt;.&lt;/p&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="https://www.linkedin.com/in/not-specified"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</content>
     <link href="http://localhost:5000/rss"/>
-    <published>2025-09-21T17:24:43.838121+00:00</published>
+    <published>2025-09-21T17:40:32.308201+00:00</published>
   </entry>
   <entry>
-    <id>urn:uuid:a001e5a5-4a7c-4ef7-a7ac-86eae85a10bf</id>
-    <title>Senior AI Engineer
-Senior AI Engineer with verification</title>
-    <updated>2025-09-21T16:24:43.838090+00:00</updated>
+    <id>urn:uuid:ea38fba6-fa36-4d33-a1f0-fda626b858e0</id>
+    <title>Lead AI Engineer
+Lead AI Engineer</title>
+    <updated>2025-09-21T16:40:32.308162+00:00</updated>
     <content>&lt;div style="border: 1px solid #ddd; border-radius: 8px; margin: 16px 0; padding: 16px; font-family: sans-serif; line-height: 1.6;"&gt;
     
+    &lt;!-- HEADER: Company and Job Title --&gt;
+    &lt;h2 style="margin-top: 0; margin-bottom: 8px; font-size: 1.4em;"&gt;
+        🏢 CoreMedia Portugal — Lead AI Engineer
+    &lt;/h2&gt;
+    
+    &lt;!-- METADATA: Location, Work Type, Salary --&gt;
+    &lt;div style="font-size: 0.9em; color: #555; margin-bottom: 16px;"&gt;
+        &lt;span&gt;📍 Porto Metropolitan Area (Hybrid)&lt;/span&gt; |
+        &lt;span&gt;🔄 Hybrid&lt;/span&gt; |
+        &lt;span&gt;💰 Not specified&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;!-- FIT ASSESSMENT: Colored box for emphasis --&gt;
+    &lt;div style="border-radius: 4px; padding: 12px; margin-bottom: 16px; background-color: #fff3e0; color: #f57c00;"&gt;
+        &lt;strong style="font-size: 1.1em;"&gt;⚖️ Fit: Medium&lt;/strong&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate possesses a wide range of skills in &lt;strong&gt;AI&lt;/strong&gt;, &lt;strong&gt;Python&lt;/strong&gt;, and cloud services, but lacks some specific technologies mentioned in the job description.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- DETAILS: Skills analysis --&gt;
+    &lt;div&gt;
+        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;Python:&lt;/strong&gt; Profile shows experience in Python which is applicable for backend development and AI.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Candidate has a strong background in &lt;strong&gt;Azure&lt;/strong&gt; services, which is necessary for deploying AI systems.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;AI Services:&lt;/strong&gt; Experience with &lt;strong&gt;Cognitive Services&lt;/strong&gt; and &lt;strong&gt;OpenAI&lt;/strong&gt; aligns well with the AI-focused role.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;REST APIs:&lt;/strong&gt; Candidate's skill in &lt;strong&gt;REST&lt;/strong&gt; frameworks is relevant for developing and consuming APIs.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;DevOps:&lt;/strong&gt; Knowledge in &lt;strong&gt;CI/CD&lt;/strong&gt; and &lt;strong&gt;Azure DevOps&lt;/strong&gt; provides valuable skills to manage AI deployments.&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;PHP:&lt;/strong&gt; The job specifies PHP as a primary backend language; the candidate has no PHP experience.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;RAG architecture:&lt;/strong&gt; The job requires hands-on experience with &lt;strong&gt;RAG&lt;/strong&gt; pipelines which is not indicated in the profile.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;LangChain &amp; LangSmith:&lt;/strong&gt; Familiarity with these specific technologies is necessary and is absent in the profile.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Vector databases:&lt;/strong&gt; Candidate lacks experience with vector databases like ChromaDB, which are important for the role.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The candidate's academic background in Computer Science and Cybersecurity, along with several relevant &lt;strong&gt;Microsoft certifications&lt;/strong&gt;, contribute positively, making them a viable candidate despite the missing skills.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- FOOTER: Consultancy, Company Info, Profile Link --&gt;
+    &lt;div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 16px; font-size: 0.9em; color: #555;"&gt;
+        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About CoreMedia Portugal:&lt;/strong&gt; CoreMedia Portugal appears to be connected to CoreMedia GmbH, a Hamburg company that provides Digital Experience Platform (DXP) and Content Management software solutions. Their presence in Portugal enhances their services in &lt;strong&gt;digital experience&lt;/strong&gt; and content management.&lt;/p&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="https://www.linkedin.com/jobs/view/4281087114/?eBP=CwEAAAGZbSPsgKPP0KruNv61ceQ_abfeP0yrezC0wAi2hMB7x-T26fud4pPiiFlGEMozxmMZh_2g7s-zhOjnzhUopVLLq8KQ9Lowi6eOu66qrwPyFqK5WCuK-fJXcs8XBn6MBXSGk1mhpD_bLyVacjjm455N3xLj7onrPPx6VvPcTwck3RuhKLd4qXlZUbGBChjzo0gM433TY1wveCOxVrCGJHVNKYIiW1GO_-49Pj4WU-DIowy5SGx29I0qGOZSrtgGHMaZAUsM31klE-xWKU7PfGzCUdxgvqtk79k4MbQ7Y2sN9_UojnP7Qjm8a8hREgaMOrkRoWVHwDTAILZYZftQa17lFKfOb1v7unYvfnGuJV6DP0szwHBJ1j1nfAQyEsdeRElRTfgHEmiaBvVA_cW-YVKPDphWkGlCpzcP8WXfZ-gpl2A4G7h0wgppN-4g4D0Mj9LVKI_otoheNrf_V2tvc_A2LAjdC6YqlHOcFUhFVB_lrkQ90j4DKg&amp;refId=zxepv%2BBzcjw2WxjB4Wuoiw%3D%3D&amp;trackingId=uCXUApLeaMtLf%2FE65O%2F3bg%3D%3D&amp;trk=flagship3_search_srp_jobs"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</content>
+    <link href="http://localhost:5000/rss"/>
+    <published>2025-09-21T17:40:32.308186+00:00</published>
+  </entry>
+  <entry>
+    <id>urn:uuid:b2c2acf8-9ad2-47ef-8adf-8f3bc9732524</id>
+    <title>Senior AI Engineer
+Senior AI Engineer with verification</title>
+    <updated>2025-09-21T16:40:32.308147+00:00</updated>
+    <content>&lt;div style="border: 1px solid #ddd; border-radius: 8px; margin: 16px 0; padding: 16px; font-family: sans-serif; line-height: 1.6;"&gt;
+    
+    &lt;!-- HEADER: Company and Job Title --&gt;
     &lt;h2 style="margin-top: 0; margin-bottom: 8px; font-size: 1.4em;"&gt;
         🏢 Ducker Carlisle — Senior AI Engineer
     &lt;/h2&gt;
     
-    &lt;div style="font-size: 0.9em; color: #555; margin-bottom: 16px;"&gt;
-        &lt;span&gt;📍 Lisbon, Portugal&lt;/span&gt; | 
-        &lt;span&gt;🔄 Hybrid&lt;/span&gt; | 
-        &lt;span&gt;💰 Not specified&lt;/span&gt;
-    &lt;/div&gt;
-
-    &lt;div style="border-radius: 4px; padding: 12px; margin-bottom: 16px; background-color: #e8f5e9; color: #2e7d32;"&gt;
-        &lt;strong style="font-size: 1.1em;"&gt;✅ Fit: Strong&lt;/strong&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate possesses a Master’s degree, strong proficiency in &lt;strong&gt;Python&lt;/strong&gt; and &lt;strong&gt;SQL&lt;/strong&gt;, and has experience with Azure, which matches the job requirements closely.&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div&gt;
-        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Python&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;SQL&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Azure&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Cognitive Services&lt;/span&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Large Language Models&lt;/span&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The job emphasizes familiarity with large language models, which the candidate has not specified experience with. However, the extensive skills in AI/ML tools and Azure indicate a strong foundation for learning and adapting to these technologies.&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 16px; font-size: 0.9em; color: #555;"&gt;
-        &lt;p style="margin: 0 0 8px 0;"&gt;&lt;strong&gt;Consultancy Check:&lt;/strong&gt; 🚨 Consultancy&lt;/p&gt;
-        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About Ducker Carlisle:&lt;/strong&gt; Ducker Carlisle is a global consulting and M&amp;A advisory company that provides insights, benchmarking, and strategy solutions to businesses and private equity firms worldwide. The company specializes in business strategy consulting and M&amp;A support services across key industry sectors, with decades of experience helping clients achieve growth and profitability. &lt;strong&gt;Ducker Carlisle&lt;/strong&gt; has been expanding its global presence, including the opening of a new London office, and positions itself as a trusted partner that translates strategic ideas into measurable results for executives and their teams.&lt;/p&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="Not specified"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</content>
-    <link href="http://localhost:5000/rss"/>
-    <published>2025-09-21T17:24:43.838104+00:00</published>
-  </entry>
-  <entry>
-    <id>urn:uuid:49c1a4b4-9eac-48b3-baf3-142998e3fbe2</id>
-    <title>Generative AI Engineer
-Generative AI Engineer</title>
-    <updated>2025-09-21T16:24:43.838072+00:00</updated>
-    <content>&lt;div style="border: 1px solid #ddd; border-radius: 8px; margin: 16px 0; padding: 16px; font-family: sans-serif; line-height: 1.6;"&gt;
-    
-    &lt;!-- HEADER: Company and Job Title --&gt;
-    &lt;h2 style="margin-top: 0; margin-bottom: 8px; font-size: 1.4em;"&gt;
-        🏢 Planck Technologies — Generative AI Engineer
-    &lt;/h2&gt;
-    
     &lt;!-- METADATA: Location, Work Type, Salary --&gt;
     &lt;div style="font-size: 0.9em; color: #555; margin-bottom: 16px;"&gt;
-        &lt;span&gt;📍 Lisbon, Portugal&lt;/span&gt; | 
-        &lt;span&gt;🔄 Hybrid&lt;/span&gt; | 
+        &lt;span&gt;📍 Lisbon, Portugal&lt;/span&gt; |
+        &lt;span&gt;🔄 Hybrid&lt;/span&gt; |
         &lt;span&gt;💰 Not specified&lt;/span&gt;
     &lt;/div&gt;
 
     &lt;!-- FIT ASSESSMENT: Colored box for emphasis --&gt;
     &lt;div style="border-radius: 4px; padding: 12px; margin-bottom: 16px; background-color: #e8f5e9; color: #2e7d32;"&gt;
         &lt;strong style="font-size: 1.1em;"&gt;✅ Fit: Strong&lt;/strong&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate possesses strong expertise in &lt;strong&gt;Machine Learning&lt;/strong&gt; and relevant programming skills including &lt;strong&gt;Python&lt;/strong&gt; and &lt;strong&gt;Azure&lt;/strong&gt;, matching key job requirements.&lt;/p&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate's expertise in &lt;strong&gt;Python&lt;/strong&gt;, experience with &lt;strong&gt;Azure&lt;/strong&gt;, and knowledge of &lt;strong&gt;AI&lt;/strong&gt; solutions aligns well with the job requirements.&lt;/p&gt;
     &lt;/div&gt;
 
-    &lt;!-- DETAILS: Skills analysis using badges --&gt;
+    &lt;!-- DETAILS: Skills analysis --&gt;
     &lt;div&gt;
-        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Python&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Machine Learning&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Azure&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Cognitive Services&lt;/span&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;AWS&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Google Cloud&lt;/span&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The candidate has strong foundations in &lt;strong&gt;AI&lt;/strong&gt; and &lt;strong&gt;Cybersecurity&lt;/strong&gt; from their Master’s studies, enhancing their ability in developing robust solutions.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;Python:&lt;/strong&gt; The job requires proficiency in Python, which is a primary skill in the profile.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;SQL:&lt;/strong&gt; The job mentions SQL, which is included in the candidate's skills.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Familiarity with &lt;strong&gt;Azure&lt;/strong&gt; is part of the candidate's profile and is beneficial for this role.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;AI / ML Tools:&lt;/strong&gt; Experience with &lt;strong&gt;Semantic Kernel&lt;/strong&gt; and &lt;strong&gt;LangChain&lt;/strong&gt; aligns with the role's focus on AI.&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;Large Language Models:&lt;/strong&gt; The job emphasizes familiarity with LLMs like GPT, which is not explicitly mentioned in the profile.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Data Science:&lt;/strong&gt; The requirement for coursework or experience in data science is not covered in the candidate's background.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The candidate has a strong foundation in &lt;strong&gt;Cybersecurity&lt;/strong&gt;, which may contribute to a comprehensive understanding of &lt;strong&gt;AI&lt;/strong&gt; system security and ethics but lacks specific experience with &lt;strong&gt;Cloud AI tools&lt;/strong&gt; across their projects.&lt;/p&gt;
     &lt;/div&gt;
 
     &lt;!-- FOOTER: Consultancy, Company Info, Profile Link --&gt;
     &lt;div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 16px; font-size: 0.9em; color: #555;"&gt;
-        &lt;p style="margin: 0 0 8px 0;"&gt;&lt;strong&gt;Consultancy Check:&lt;/strong&gt; ✅ Not Consultancy&lt;/p&gt;
-        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About Planck Technologies:&lt;/strong&gt; Planck Technology is an IT services and consulting company founded in 2021 that specializes in bridging the gap between exceptional talent and outstanding opportunities in the IT landscape. The company operates as a workforce specialist, connecting highly skilled and rigorously vetted IT professionals with leading companies across the United States and Canada. Planck Technology offers training programs to prepare candidates for today's competitive job market and has built a reputation for placing candidates in positions that align with their professional goals.&lt;/p&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="https://www.linkedin.com/jobs/view/4287144564/?eBP=CwEAAAGZbRWgFjy7bS9mxVnjqKSppjp8_3NdNTh03QCpAog2T9mUHqafK3A38pGfUAqSsT7qQC9nuf2rIQbxN574alG2zcMXXFe8uGVgunJZCxVGB6fV17tmAPMIB89W1jrbSXTUPT5ng9HQm6PKZ2nquRcN9MS_5DAo46r_aipAvGtBa5kI25wtpnqEvVb51qw54nYzlOc1jOkbC_v6q_QLSjxiXijhBGeioW1ko1W3_lB4Xoje_GFdnNEvIhifGT8dn4ERW2ezQj5J82FZt32A9Xl8Tka4ZeGg2M2Dn9T8YyZtmczKJlQytoy2Dd7OaUFReh3IqDZOP3_lCFZrP7nQTkM5P6r4qp0HZmTJgE_-aJ4sz3Lshej3y6dNZTnh4XboYYBXqxTNDQe91uQBHfWw5l_hQwfT5GwjvCEx5U5DowZMnNQ4al8BbsDeQD6NjALOiTpyK-46mDvzMvoPtRVSpMkiqFMGSaKHuy9m7Qhk4ZmqmeoEop2F-M_GWvS3U71U6NEZKf5Svg&amp;refId=%2BTyuzudK2D1J2LYyBnrLGw%3D%3D&amp;trackingId=UublekenjUKHGDueQ%2Bwe5w%3D%3D&amp;trk=flagship3_search_srp_jobs"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
+        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About Ducker Carlisle:&lt;/strong&gt; Ducker Carlisle is a global consulting and M&amp;A advisory company that provides insights, benchmarking, and strategy solutions to businesses and private equity firms worldwide. The company specializes in business strategy consulting and M&amp;A support services across key industry sectors, with decades of experience helping clients achieve growth and profitability. Ducker Carlisle has been expanding its global presence, including the opening of a new London office, and positions itself as a trusted partner that translates strategic ideas into measurable results for executives and their teams.&lt;/p&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="Not specified"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</content>
     <link href="http://localhost:5000/rss"/>
-    <published>2025-09-21T17:24:43.838086+00:00</published>
+    <published>2025-09-21T17:40:32.308159+00:00</published>
   </entry>
   <entry>
-    <id>urn:uuid:8af0e4ad-39d0-4e4b-8295-716c0aae7d12</id>
-    <title>Machine Learning Engineer
-Machine Learning Engineer</title>
-    <updated>2025-09-21T16:24:43.838051+00:00</updated>
+    <id>urn:uuid:883384a1-d71b-4583-bd6e-8eb85ab1e5be</id>
+    <title>Machine Learning Consultant
+Machine Learning Consultant</title>
+    <updated>2025-09-21T16:40:32.308129+00:00</updated>
     <content>&lt;div style="border: 1px solid #ddd; border-radius: 8px; margin: 16px 0; padding: 16px; font-family: sans-serif; line-height: 1.6;"&gt;
     
     &lt;!-- HEADER: Company and Job Title --&gt;
     &lt;h2 style="margin-top: 0; margin-bottom: 8px; font-size: 1.4em;"&gt;
-        🏢 Adentis Portugal — Machine Learning Engineer
+        🏢 Sysmatch — Machine Learning Consultant
     &lt;/h2&gt;
     
     &lt;!-- METADATA: Location, Work Type, Salary --&gt;
     &lt;div style="font-size: 0.9em; color: #555; margin-bottom: 16px;"&gt;
-        &lt;span&gt;📍 Lisbon, Portugal&lt;/span&gt; | 
-        &lt;span&gt;🔄 Hybrid&lt;/span&gt; | 
+        &lt;span&gt;📍 Lisbon, Portugal&lt;/span&gt; |
+        &lt;span&gt;🔄 Hybrid - 2/3x per week&lt;/span&gt; |
         &lt;span&gt;💰 Not specified&lt;/span&gt;
     &lt;/div&gt;
 
     &lt;!-- FIT ASSESSMENT: Colored box for emphasis --&gt;
     &lt;div style="border-radius: 4px; padding: 12px; margin-bottom: 16px; background-color: #e8f5e9; color: #2e7d32;"&gt;
         &lt;strong style="font-size: 1.1em;"&gt;✅ Fit: Strong&lt;/strong&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate possesses strong experience in developing &lt;strong&gt;machine learning models&lt;/strong&gt; along with expertise in &lt;strong&gt;Azure&lt;/strong&gt; and associated tools like &lt;strong&gt;Azure Databricks&lt;/strong&gt;, making them an excellent match for the role.&lt;/p&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate's experience in &lt;strong&gt;Python&lt;/strong&gt; and various &lt;strong&gt;AI / ML Tools&lt;/strong&gt; aligns well with the job requirements, particularly in machine learning and software engineering.&lt;/p&gt;
     &lt;/div&gt;
 
-    &lt;!-- DETAILS: Skills analysis using badges --&gt;
+    &lt;!-- DETAILS: Skills analysis --&gt;
     &lt;div&gt;
-        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt; 
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Python&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Azure&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Azure Databricks&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Data Engineering&lt;/span&gt;
-        &lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt; 
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;R&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Scala&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;TensorFlow&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;PyTorch&lt;/span&gt;
-            &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Scikit-Learn&lt;/span&gt;
-        &lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The applicant demonstrates solid qualifications in &lt;strong&gt;machine learning&lt;/strong&gt; and experience in cloud environments, which are crucial for success in this position.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;Python:&lt;/strong&gt; Profile shows proficiency in this language, which is specifically required for the role.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Experience with Azure services aligns with the requirements for MLOps and model development.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;AI / ML Tools:&lt;/strong&gt; Familiarity with tools like &lt;strong&gt;LangChain&lt;/strong&gt; and &lt;strong&gt;Semantic Kernel&lt;/strong&gt; suggests capability in implementing ML solutions.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Databases:&lt;/strong&gt; Experience with &lt;strong&gt;CosmosDB&lt;/strong&gt; shows an understanding of data management, which is relevant for ML models.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Cloud &amp; DevOps:&lt;/strong&gt; Knowledge of Azure DevOps and CI/CD is important for MLOps tasks mentioned in the job description.&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;TensorFlow:&lt;/strong&gt; Required by the job for ML implementation, not listed in the profile.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Pytorch:&lt;/strong&gt; This is also mentioned in the job requirements but is not part of the candidate's skills.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Natural Language Processing:&lt;/strong&gt; Experience with NLP is essential for this role, currently unspecified in the profile.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Vertex AI:&lt;/strong&gt; Experience with this platform is needed for model deployment and management.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The candidate has a strong background in both &lt;strong&gt;Cybersecurity&lt;/strong&gt; and &lt;strong&gt;AI / ML&lt;/strong&gt;, making them a versatile fit, though additional training may be required for specific tools outlined in the job.&lt;/p&gt;
     &lt;/div&gt;
 
     &lt;!-- FOOTER: Consultancy, Company Info, Profile Link --&gt;
     &lt;div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 16px; font-size: 0.9em; color: #555;"&gt;
-        &lt;p style="margin: 0 0 8px 0;"&gt;&lt;strong&gt;Consultancy Check:&lt;/strong&gt; ✅ Not Consultancy&lt;/p&gt;
-        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About Adentis Portugal:&lt;/strong&gt; Adentis Portugal is an IT services and consulting company that specializes in IT consulting and development services. They focus on providing technology solutions and consulting expertise to help organizations optimize their technological infrastructure and digital capabilities.&lt;/p&gt;
+        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About Sysmatch:&lt;/strong&gt; Sysmatch is an IT Consultancy and Outsourcing Company that has been operating in the technology market for almost two decades since its founding in 1999. The company specializes in providing a wide range of technological solutions, leveraging the accumulated know-how and experience of their consultants to implement robust and scalable solutions tailored to client needs. With a workforce of 51-200 employees and 65 associated LinkedIn members, Sysmatch positions itself as a flexible, adaptable, innovative and forward-looking organization in the Information Technology &amp; Services industry, focusing on delivering customized IT solutions and outsourcing services to meet diverse business requirements.&lt;/p&gt;
         &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="Not specified"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</content>
     <link href="http://localhost:5000/rss"/>
-    <published>2025-09-21T17:24:43.838067+00:00</published>
+    <published>2025-09-21T17:40:32.308143+00:00</published>
   </entry>
   <entry>
-    <id>urn:uuid:84c8c044-42aa-4f27-a8d2-bb9e01cc6dfa</id>
+    <id>urn:uuid:0910200c-a2af-4ea1-8045-da3c5d11a464</id>
     <title>Senior AI Engineer
 Senior AI Engineer</title>
-    <updated>2025-09-21T16:24:43.837987+00:00</updated>
+    <updated>2025-09-21T16:40:32.308108+00:00</updated>
     <content>&lt;div style="border: 1px solid #ddd; border-radius: 8px; margin: 16px 0; padding: 16px; font-family: sans-serif; line-height: 1.6;"&gt;
     
-    &lt;!-- HEADER: Company and Job Title --&gt;
     &lt;h2 style="margin-top: 0; margin-bottom: 8px; font-size: 1.4em;"&gt;
         🏢 Allia Health Group — Senior AI Engineer
     &lt;/h2&gt;
-    
-    &lt;!-- METADATA: Location, Work Type, Salary --&gt;
+
     &lt;div style="font-size: 0.9em; color: #555; margin-bottom: 16px;"&gt;
-        &lt;span&gt;📍 Madeira Island, Portugal (Hybrid)&lt;/span&gt; | 
-        &lt;span&gt;🔄 Hybrid&lt;/span&gt; | 
+        &lt;span&gt;📍 Madeira Island, Portugal (Hybrid)&lt;/span&gt; |
+        &lt;span&gt;🔄 Hybrid&lt;/span&gt; |
         &lt;span&gt;💰 Not specified&lt;/span&gt;
     &lt;/div&gt;
 
-    &lt;!-- FIT ASSESSMENT: Colored box for emphasis --&gt;
     &lt;div style="border-radius: 4px; padding: 12px; margin-bottom: 16px; background-color: #e8f5e9; color: #2e7d32;"&gt;
         &lt;strong style="font-size: 1.1em;"&gt;✅ Fit: Strong&lt;/strong&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate possesses a broad range of relevant skills, including &lt;strong&gt;Python&lt;/strong&gt;, AI/ML frameworks, and experience with cloud platforms such as Azure, aligning closely with the requirements of the role.&lt;/p&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate possesses over 80% of the required skills including expertise in &lt;strong&gt;Python&lt;/strong&gt;, &lt;strong&gt;AI&lt;/strong&gt; techniques, and &lt;strong&gt;Azure&lt;/strong&gt; services that are crucial for this role.&lt;/p&gt;
     &lt;/div&gt;
 
-    &lt;!-- DETAILS: Skills analysis using badges --&gt;
     &lt;div&gt;
-        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Python&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Azure&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Machine Learning&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;MLOps&lt;/span&gt; &lt;span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;CI/CD&lt;/span&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt; &lt;span style="background-color: #ddd; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Google Cloud Vertex AI&lt;/span&gt; &lt;span style="background-color: #ddd; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;TensorFlow&lt;/span&gt; &lt;span style="background-color: #ddd; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Docker&lt;/span&gt; &lt;span style="background-color: #ddd; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;"&gt;Kubernetes&lt;/span&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The candidate has relevant coursework and practical experience in AI/ML through their academic background and work experience. The proficiency in &lt;strong&gt;Python&lt;/strong&gt; and familiarity with concepts like &lt;strong&gt;MLOps&lt;/strong&gt; make them a suitable candidate for this role.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;Python:&lt;/strong&gt; Profile includes strong proficiency, which is essential for AI/ML projects.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Extensive experience listed, including &lt;strong&gt;Azure Machine Learning&lt;/strong&gt; which aligns with the job's focus on cloud AI.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Machine Learning:&lt;/strong&gt; Relevant frameworks and tools are well covered, including practical experience with &lt;strong&gt;TensorFlow&lt;/strong&gt; and &lt;strong&gt;scikit-learn&lt;/strong&gt;.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;CI/CD:&lt;/strong&gt; Candidate's knowledge of CI/CD practices complements the requirement for MLOps in the job description.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Containerization:&lt;/strong&gt; Familiarity with &lt;strong&gt;Docker&lt;/strong&gt; and &lt;strong&gt;Kubernetes&lt;/strong&gt; aligns with the deployment requirements.&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;Google Cloud Vertex AI:&lt;/strong&gt; Job prefers experience with this specific cloud platform, which is not mentioned in the profile.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;NLP:&lt;/strong&gt; Although the candidate has AI/ML experience, no specific mention of Natural Language Processing expertise.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Looker:&lt;/strong&gt; The job description references this BI tool, which was not indicated in the profile’s skills.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The candidate’s strong background in &lt;strong&gt;AI&lt;/strong&gt; and &lt;strong&gt;Azure&lt;/strong&gt; positions them well for the role, though they may need to familiarize themselves with &lt;strong&gt;Google Cloud&lt;/strong&gt; tools.&lt;/p&gt;
     &lt;/div&gt;
 
-    &lt;!-- FOOTER: Consultancy, Company Info, Profile Link --&gt;
     &lt;div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 16px; font-size: 0.9em; color: #555;"&gt;
-        &lt;p style="margin: 0 0 8px 0;"&gt;&lt;strong&gt;Consultancy Check:&lt;/strong&gt; ✅ Not Consultancy&lt;/p&gt;
-        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About Allia Health Group:&lt;/strong&gt; Allia Health Group is a specialized company that focuses on out-of-network revenue recovery and capital solutions for healthcare providers. Their primary expertise lies in helping healthcare providers navigate complex financial issues, particularly those related to insurance reimbursements and revenue optimization in situations where providers are operating outside of traditional insurance networks.&lt;/p&gt;
-        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="https://www.linkedin.com/jobs/view/4303113614/?eBP=CwEAAAGZbRWgFtiUwgJUyUZV56dAPAYnJsSnudOZct77B5_6sjr5kSAC_nJlZSSIyPFgtdgnbeUv-KkfsOkeZFoPBIW387sW6Sixh_yn6eCGVAIg0k43xy5ILsJvHdZLhHC83uZ-4zaEv_VSxzO8TET9JekwlADhMB2epQj2N9alwhd5RPXo85G2868n30bU8-HvhJG84vVWxnH7U0-gVCCXwfVT-NwnOqBwENAXTRJOgD9G5TOVyEm6gBgjxaVAJCwS0rjbhkd7PEF9NNZD5vPOwfo-c1HABzXhALge0DhXMBKNnXVlBwdBOQXcpaS14zbT7v5hx9Ue4XFM97IPWYghDHxWSIpBXywKPnrINNjnvkq0dyy0OQIfZ-y448pxhvAHCtStWx5PAQU_1JYKJS0bAc1QisD_6EmRt1Hx-Ym4Ip4WKC5gQZbgu0EEMQgHSnWArBkH03sT14WV4POhin60uKhZNwI5axyXYcX26o8GmihKVnUnJ8IRdqVVPnM56WuhpQ&amp;refId=%2BTyuzudK2D1J2LYyBnrLGw%3D%3D&amp;trackingId=NISqaFnKBnKwV1CtAcI4Yw%3D%3D&amp;trk=flagship3_search_srp_jobs"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
+        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About Allia Health Group:&lt;/strong&gt; Allia Health Group is a specialized company that brings together a unique team of leading medical, legal, healthcare insurance, and practice management experts who focus on solving financial challenges within the healthcare industry. The company operates as a multidisciplinary organization that leverages expertise across various sectors to address complex financial issues faced by healthcare providers and related businesses. Their integrated approach combines &lt;strong&gt;medical&lt;/strong&gt; knowledge with &lt;strong&gt;legal&lt;/strong&gt; expertise, &lt;strong&gt;insurance&lt;/strong&gt; understanding, and &lt;strong&gt;practice management&lt;/strong&gt; skills to provide comprehensive solutions for their clients' financial needs in the healthcare space.&lt;/p&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="Not specified"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</content>
     <link href="http://localhost:5000/rss"/>
-    <published>2025-09-21T17:24:43.838032+00:00</published>
+    <published>2025-09-21T17:40:32.308125+00:00</published>
+  </entry>
+  <entry>
+    <id>urn:uuid:aa96c9d2-2d04-4280-b283-6a09ff8f644c</id>
+    <title>MLOps Engineer
+MLOps Engineer</title>
+    <updated>2025-09-21T16:40:32.308039+00:00</updated>
+    <content>&lt;div style="border: 1px solid #ddd; border-radius: 8px; margin: 16px 0; padding: 16px; font-family: sans-serif; line-height: 1.6;"&gt;
+    
+    &lt;h2 style="margin-top: 0; margin-bottom: 8px; font-size: 1.4em;"&gt;
+        🏢 Adentis Portugal — MLOps Engineer
+    &lt;/h2&gt;
+    
+    &lt;div style="font-size: 0.9em; color: #555; margin-bottom: 16px;"&gt;
+        &lt;span&gt;📍 Lisbon, Portugal (Hybrid)&lt;/span&gt; |
+        &lt;span&gt;🔄 Hybrid&lt;/span&gt; |
+        &lt;span&gt;💰 Not specified&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div style="border-radius: 4px; padding: 12px; margin-bottom: 16px; background-color: #e8f5e9; color: #2e7d32;"&gt;
+        &lt;strong style="font-size: 1.1em;"&gt;✅ Fit: Strong&lt;/strong&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Justification:&lt;/strong&gt; The candidate possesses extensive experience in &lt;strong&gt;Python&lt;/strong&gt;, &lt;strong&gt;Azure&lt;/strong&gt;, and relevant machine learning frameworks, which aligns well with essential job requirements.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;p&gt;&lt;strong&gt;✅ Matching Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;Python:&lt;/strong&gt; Required for developing machine learning models and automated data pipelines, which the candidate excels in.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Strong background in &lt;strong&gt;Azure&lt;/strong&gt; and related services matches seamlessly with the job's cloud infrastructure requirements.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;CosmosDB:&lt;/strong&gt; Familiarity with databases like &lt;strong&gt;CosmosDB&lt;/strong&gt; aligns with data pipeline management and processing tasks in the role.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Machine Learning:&lt;/strong&gt; Experience in &lt;strong&gt;Machine Learning&lt;/strong&gt;, including model development and automation, is a direct match for the position.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Data Engineering:&lt;/strong&gt; Knowledge of data engineering principles complements the role’s focus on data processing and feature stores.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Automation:&lt;/strong&gt; Experience with workflow automation tools supports the job's requirements for seamless integration processes.&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;strong&gt;❌ Missing Skills:&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;"&gt;
+            &lt;li&gt;&lt;strong&gt;R or Scala:&lt;/strong&gt; The job mentions proficiency in R or Scala, which are not part of the candidate's profile.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Kafka:&lt;/strong&gt; Experience with &lt;strong&gt;Kafka&lt;/strong&gt; is needed, but the candidate does not list this as part of their skills.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;TensorFlow or PyTorch:&lt;/strong&gt; The job requires knowledge of these machine learning libraries, which are not present in the profile.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;&lt;strong&gt;📝 Notes:&lt;/strong&gt; The candidate's academic qualifications in &lt;strong&gt;Cybersecurity&lt;/strong&gt; and &lt;strong&gt;Computer Science&lt;/strong&gt; further strengthen their fit, especially for modeling and data integrity tasks. Continuous professional development through certifications also aligns with the company's focus on growth.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 16px; font-size: 0.9em; color: #555;"&gt;
+        &lt;p style="margin: 0;"&gt;&lt;strong&gt;About Adentis Portugal:&lt;/strong&gt; Adentis Portugal is a Portuguese technology consultancy company that specializes in strategy, research and development, and nearshore services. The company has a strong focus on &lt;strong&gt;Mobility solutions&lt;/strong&gt; and provides technology consulting services to help businesses with their digital transformation needs. As a consultancy firm, Adentis Portugal leverages its expertise to deliver strategic technology solutions and development services, positioning itself as a key player in Portugal's technology services sector with particular emphasis on mobility-related projects and nearshore outsourcing capabilities.&lt;/p&gt;
+        &lt;p style="margin: 8px 0 0 0;"&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &lt;a href="Not specified"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</content>
+    <link href="http://localhost:5000/rss"/>
+    <published>2025-09-21T17:40:32.308088+00:00</published>
   </entry>
 </feed>

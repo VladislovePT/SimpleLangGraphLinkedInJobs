@@ -24,6 +24,8 @@ from linkedin_agent.tools import append_to_wiki_page
 from dotenv import load_dotenv
 import os
 
+from linkedin_agent.utils.mysql_logger import init_db, log
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -105,9 +107,11 @@ async def analyze_job_matches(state: MessagesState):
     and compiling the results into a single JSON array for the RSS feed.
     """
     print("\n--- Analyzing Job Matches ---")
+    log('INFO', 'AnalyzeJobMatches', 'Starting job match analysis.')
     last_message = state["messages"][-1]
 
     if not hasattr(last_message, 'content') or not isinstance(last_message.content, str):
+        log('WARNING', 'AnalyzeJobMatches', 'No content found in the last message to analyze.')
         return {"messages": [AIMessage(content="I couldn't find any job results to analyze.")]}
 
     jobs_json_str = last_message.content
@@ -115,20 +119,24 @@ async def analyze_job_matches(state: MessagesState):
         jobs_data = json.loads(jobs_json_str)
         if not isinstance(jobs_data, list):
             jobs_data = [jobs_data] if isinstance(jobs_data, dict) else []
-    except (json.JSONDecodeError, TypeError):
+    except (json.JSONDecodeError, TypeError) as e:
         error_content = "I couldn't analyze the job results because I received invalid data from the search tool."
+        log('ERROR', 'AnalyzeJobMatches', 'JSON decoding failed.', {'error': str(e), 'content': jobs_json_str})
         return {"messages": [AIMessage(content=error_content)]}
 
     if not jobs_data:
+        log('INFO', 'AnalyzeJobMatches', 'No valid jobs found to analyze.')
         return {"messages": [AIMessage(content="No valid jobs found to analyze.")]}
 
     # Load user profile
     try:
         with open(PROFILE_JSON_PATH, 'r') as f:
             profile_data = json.load(f)
-    except FileNotFoundError:
+    except FileNotFoundError as e:
+        log('ERROR', 'AnalyzeJobMatches', 'Profile JSON file not found.', {'path': PROFILE_JSON_PATH, 'error': str(e)})
         return {"messages": [AIMessage(content=f"Error: Your profile file was not found at {PROFILE_JSON_PATH}.")]}
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as e:
+        log('ERROR', 'AnalyzeJobMatches', 'Failed to decode profile JSON.', {'path': PROFILE_JSON_PATH, 'error': str(e)})
         return {"messages": [AIMessage(content=f"Error: I couldn't read your profile file at {PROFILE_JSON_PATH}.")]}
 
     today = datetime.today().strftime("%B %d, %Y")
@@ -144,6 +152,7 @@ async def analyze_job_matches(state: MessagesState):
         )
         analysis_tasks.append(analysis_model.ainvoke(formatted_prompt))
 
+    log('INFO', 'AnalyzeJobMatches', f'Starting analysis of {len(analysis_tasks)} jobs.')
     print(f"--- Starting analysis of {len(analysis_tasks)} jobs concurrently ---")
     analysis_results = await asyncio.gather(*analysis_tasks, return_exceptions=True)
 
@@ -156,10 +165,12 @@ async def analyze_job_matches(state: MessagesState):
         html_content = ""
         
         if isinstance(result, Exception):
+            log('ERROR', 'AnalyzeJobMatches', f'Error analyzing job: {job_identifier}', {'exception': str(result)})
             print(f"--- Error analyzing job: {job_identifier} ---")
             print(f"Exception: {result}")
             html_content = f"<h2>Error analyzing job: {job_title}</h2><p>An exception occurred during analysis: {result}</p>"
         else:
+            log('INFO', 'AnalyzeJobMatches', f'Successfully processed analysis for job: {job_identifier}')
             print(f"--- Successfully processed analysis for job: {job_identifier} ---")
             html_content = result.content
 
@@ -170,6 +181,7 @@ async def analyze_job_matches(state: MessagesState):
 
     final_content = json.dumps(compiled_responses, indent=2)
     analysis_result_message = AIMessage(content=final_content)
+    log('INFO', 'AnalyzeJobMatches', 'Finished job match analysis.', {'jobs_analyzed': len(compiled_responses)})
     return {"messages": [analysis_result_message]}
 
 
@@ -220,32 +232,41 @@ def build_graph(call_model_node, tool_node):
 
 async def run_agent():
     """Runs the agent to get job analysis and returns the content."""
-    # 1. Initialize model and client
-    model = init_chat_model(MODEL_NAME)
-    client = create_mcp_client()
+    init_db() # Ensure the database is ready
+    log('INFO', 'RunAgent', 'Starting agent run.')
+    try:
+        # 1. Initialize model and client
+        model = init_chat_model(MODEL_NAME)
+        client = create_mcp_client()
 
-    # 2. Setup tools and bind to model
-    model_with_tools, tool_node = await setup_tools_and_model(client, model)
+        # 2. Setup tools and bind to model
+        model_with_tools, tool_node = await setup_tools_and_model(client, model)
 
-    # 3. Define the model calling node (closure to capture model_with_tools)
-    async def call_model(state: MessagesState):
-        """Invokes the model with the current state."""
-        messages = state["messages"]
-        response = await model_with_tools.ainvoke(messages)
-        return {"messages": [response]}
+        # 3. Define the model calling node (closure to capture model_with_tools)
+        async def call_model(state: MessagesState):
+            """Invokes the model with the current state."""
+            messages = state["messages"]
+            response = await model_with_tools.ainvoke(messages)
+            return {"messages": [response]}
 
-    # 4. Build the graph
-    graph = build_graph(call_model, tool_node)
+        # 4. Build the graph
+        graph = build_graph(call_model, tool_node)
 
-    # 5. Use a default or random query
-    if isinstance(prompts.jobs_query, list) and prompts.jobs_query:
-        user_query = random.choice(prompts.jobs_query)
-    else:
-        user_query = "AI Engineer" # Fallback
+        # 5. Use a default or random query
+        if isinstance(prompts.jobs_query, list) and prompts.jobs_query:
+            user_query = random.choice(prompts.jobs_query)
+        else:
+            user_query = "AI Engineer" # Fallback
+        log('INFO', 'RunAgent', f'Using job query: {user_query}')
 
-    final_state = await graph.ainvoke(
-        {"messages": [{"role": "user", "content": f"search for jobs using the following query: {user_query}"}]}
-    )
+        final_state = await graph.ainvoke(
+            {"messages": [{"role": "user", "content": f"search for jobs using the following query: {user_query}"}]}
+        )
 
-    response = final_state['messages'][-1].content
-    return response
+        response = final_state['messages'][-1].content
+        log('INFO', 'RunAgent', 'Agent run completed successfully.')
+        return response
+    except Exception as e:
+        log('CRITICAL', 'RunAgent', 'Agent run failed with an unhandled exception.', {'error': str(e)})
+        # Re-raise the exception after logging to ensure the caller is aware of the failure
+        raise

@@ -7,7 +7,7 @@
     "Power BI", "Power Automate", "Azure DevOps",
     "Azure Resource Manager", "ARM Templates", "Monitoring", "CI/CD"
   ],
-  "AI / ML Tools": ["Semantic Kernel", "LangChain", "LangGraph", "LangSmith", "AI Foundry"],
+  "AI Tools": ["Semantic Kernel", "LangChain", "LangGraph", "LangSmith", "AI Foundry"],
   "Azure AI Services": [
     "Cognitive Services", "OpenAI", "AI Search", "Vision", "Speech", "Document Intelligence",
     "Bot Framework", "Bot Service", "AI Inference SDK",

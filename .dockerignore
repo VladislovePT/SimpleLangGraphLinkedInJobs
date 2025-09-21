@@ -1,0 +1,20 @@
+# Ignore Git and VSCode specific files
+.git
+.gitignore
+.vscode/
+
+# Ignore the virtual environment
+.ai-venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore environment files - these should be passed at runtime
+.env
+.env.example
+
+# Ignore markdown and Docker files
+README.md
+Dockerfile
+.dockerignore

@@ -48,8 +48,8 @@ Here is the required HTML structure:
     
     <!-- METADATA: Location, Work Type, Salary -->
     <div style="font-size: 0.9em; color: #555; margin-bottom: 16px;">
-        <span>📍 <LOCATION></span> | 
-        <span><WORK_TYPE_EMOJI> <WORK_TYPE></span> | 
+        <span>📍 <LOCATION></span> |
+        <span><WORK_TYPE_EMOJI> <WORK_TYPE></span> |
         <span>💰 <SALARY></span>
     </div>
 
@@ -59,16 +59,24 @@ Here is the required HTML structure:
         <p style="margin: 8px 0 0 0;"><strong>Justification:</strong> <FIT_REASONING></p>
     </div>
 
-    <!-- DETAILS: Skills analysis using badges -->
+    <!-- DETAILS: Skills analysis -->
     <div>
-        <p><strong>✅ Matching Skills:</strong> <MATCHING_SKILLS_AS_BADGES></p>
-        <p><strong>❌ Missing Skills:</strong> <MISSING_SKILLS_AS_BADGES></p>
+        <p><strong>✅ Matching Skills:</strong></p>
+        <ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;">
+            <!-- Repeat for each matching skill. Example: <li><strong>Python:</strong> Profile shows 5 years of experience, and the job requires it for data analysis.</li> -->
+            <MATCHING_SKILLS_LIST>
+        </ul>
+
+        <p><strong>❌ Missing Skills:</strong></p>
+        <ul style="margin-top: 4px; padding-left: 20px; margin-bottom: 12px;">
+            <!-- Repeat for each missing skill. Example: <li><strong>Go:</strong> The job lists Go as a required language for microservices, which is not on the profile.</li> -->
+            <MISSING_SKILLS_LIST>
+        </ul>
         <p><strong>📝 Notes:</strong> <NOTES></p>
     </div>
 
     <!-- FOOTER: Consultancy, Company Info, Profile Link -->
     <div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 16px; font-size: 0.9em; color: #555;">
-        <p style="margin: 0 0 8px 0;"><strong>Consultancy Check:</strong> <CONSULTANCY_EMOJI> <CONSULTANCY_JUDGMENT></p>
         <p style="margin: 0;"><strong>About <COMPANY_NAME>:</strong> <COMPANY_DESCRIPTION></p>
         <p style="margin: 8px 0 0 0;"><strong>Profile:</strong> <a href="<LINKEDIN_URL>">LinkedIn</a></p>
     </div>
@@ -78,13 +86,14 @@ Here is the required HTML structure:
 1.  **Output ONLY the HTML card.** No extra text, comments, or markdown.
 2.  **Fill all placeholders.** If a value is missing from the JSON, use "Not specified".
 3.  **Fit Assessment & Colors:**
-    - **Strong Fit (>=70% match):** Use ✅, "Strong", `background-color: #e8f5e9;`, `color: #2e7d32;`.
-    - **Medium Fit (~40-70% match):** Use ⚖️, "Medium", `background-color: #fff3e0;`, `color: #f57c00;`.
-    - **Weak Fit (<40% match):** Use ❌, "Weak", `background-color: #ffebee;`, `color: #c62828;`.
-4.  **Skills as Badges:** Format every skill in <MATCHING_SKILLS_AS_BADGES> and <MISSING_SKILLS_AS_BADGES> as a styled span.
-    - **Example:** `<span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;">Python</span>`
-5.  **Consultancy Check:** Use the appropriate emoji: 🚨 (Consultancy), ✅ (Not Consultancy), ❓ (Suspected).
-6.  **Work Type:** Use an appropriate emoji: 🏢 (Onsite), 🏠 (Remote), 🔄 (Hybrid). For Hybrid, specify days if known (e.g., "Hybrid – 3 days onsite").
-7.  **Keyword Emphasis:** In the <NOTES>, <FIT_REASONING>, and <COMPANY_DESCRIPTION> sections, wrap any skills that match the candidate's PROFILE in `<strong>` tags for emphasis.
+    - **Strong Fit (>=80% match):** Use ✅, "Strong", `background-color: #e8f5e9;`, `color: #2e7d32;`.
+    - **Medium Fit (~50-80% match):** Use ⚖️, "Medium", `background-color: #fff3e0;`, `color: #f57c00;`.
+    - **Weak Fit (<50% match):** Use ❌, "Weak", `background-color: #ffebee;`, `color: #c62828;`.
+4.  **Skills Analysis:** For `<MATCHING_SKILLS_LIST>` and `<MISSING_SKILLS_LIST>`, generate a series of `<li>` items.
+    - Each `<li>` must contain the skill name in `<strong>` followed by a brief justification for why it's a match or a miss.
+    - **Matching Example:** `<li><strong>Python:</strong> Profile shows 5 years of experience, and the job requires it for data analysis.</li>`
+    - **Missing Example:** `<li><strong>Go:</strong> The job lists Go for microservices, which is not on the profile.</li>`
+5.  **Work Type:** Use an appropriate emoji: 🏢 (Onsite), 🏠 (Remote), 🔄 (Hybrid). For Hybrid, specify days if known (e.g., "Hybrid – 3 days onsite").
+6.  **Keyword Emphasis:** In the <NOTES>, <FIT_REASONING>, and <COMPANY_DESCRIPTION> sections, wrap any skills that match the candidate's PROFILE in `<strong>` tags for emphasis.
 """
 )

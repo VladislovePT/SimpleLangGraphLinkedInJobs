@@ -11,6 +11,7 @@ import pytz
 from apscheduler.schedulers.background import BackgroundScheduler
 
 from linkedin_agent.mcp_client_agent import run_agent
+from linkedin_agent.utils.mysql_logger import init_db, log, clear_logs
 
 app = Flask(__name__)
 RSS_FILE = "rss.xml"
@@ -20,6 +21,7 @@ def update_rss_feed():
     Runs the agent, generates a new RSS feed, and saves it to a file.
     """
     print("--- Updating RSS Feed ---")
+    log('INFO', 'RSS_Feed', 'Starting RSS feed update.')
     try:
         # Run the agent to get the latest analysis
         # We need to run the async function in a new event loop
@@ -27,6 +29,7 @@ def update_rss_feed():
         asyncio.set_event_loop(loop)
         analysis_content = loop.run_until_complete(run_agent())
         loop.close()
+        log('INFO', 'RSS_Feed', 'Agent run completed.', {'content_length': len(analysis_content)})
 
         # Create a new feed
         fg = FeedGenerator()
@@ -54,8 +57,10 @@ def update_rss_feed():
                 fe.link(href='http://localhost:5000/rss')
                 fe.description(job_html)
                 fe.pubDate(datetime.now().replace(tzinfo=pytz.UTC))
+            log('INFO', 'RSS_Feed', 'Successfully parsed agent output and generated feed entries.')
 
         except (json.JSONDecodeError, TypeError) as e:
+            log('ERROR', 'RSS_Feed', 'Error processing job analysis.', {'error': str(e), 'raw_output': analysis_content})
             # If parsing fails or the structure is wrong, add a single error entry
             fe = fg.add_entry()
             fe.id('urn:uuid:' + str(uuid.uuid4()))
@@ -67,9 +72,11 @@ def update_rss_feed():
         # Save the feed to a file
         fg.atom_file(RSS_FILE, pretty=True)
         print(f"--- RSS Feed updated and saved to {RSS_FILE} ---")
+        log('INFO', 'RSS_Feed', f'RSS Feed updated and saved to {RSS_FILE}.')
 
     except Exception as e:
         print(f"Error updating RSS feed: {e}")
+        log('ERROR', 'RSS_Feed', 'Error updating RSS feed.', {'error': str(e)})
 
 
 @app.route('/fluff/<path:filename>')
@@ -86,16 +93,26 @@ def rss_feed():
 
 
 if __name__ == '__main__':
+    # --- Database Logger Setup ---
+    init_db()
     # --- Scheduler Setup ---
     scheduler = BackgroundScheduler()
-    # Run the job every 4 hours with a random jitter of +/- 30 minutes (1800 seconds)
+    # Schedule the RSS feed update to run every 48 hours
     scheduler.add_job(
         update_rss_feed,
         'interval',
-        hours=24,
+        hours=48,
         jitter=36000
     )
+    # Schedule the log cleanup to run once a week (e.g., every Sunday at midnight)
+    scheduler.add_job(
+        clear_logs,
+        'cron',
+        day_of_week='sun',
+        hour=0
+    )
     scheduler.start()
+    clear_logs()
     update_rss_feed()  # Initial run to generate the feed immediately
     # --- Start Flask App ---
     app.run(debug=True, host='0.0.0.0', port=5000, use_reloader=False) # use_reloader=False is important for scheduler

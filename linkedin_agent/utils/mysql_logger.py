@@ -89,3 +89,24 @@ def log(level: str, source: str, message: str, details: dict = None):
         print(f"Error writing log to database: {e}")
         print("--- Fallback Print (logging to DB failed) ---")
         print(f"{datetime.now()} [{level}] {source}: {message}")
+
+def clear_logs():
+    """
+    Truncates the logs table to clear all entries.
+    """
+    if not _connection_pool:
+        print("--- Fallback Print (Logger not initialized) ---")
+        print("Could not clear logs because logger is not initialized.")
+        return
+
+    try:
+        log('INFO', 'LogManager', 'Attempting to clear the logs table.')
+        with _connection_pool.get_connection() as conn:
+            with conn.cursor() as cursor:
+                cursor.execute("TRUNCATE TABLE logs")
+                conn.commit()
+        log('INFO', 'LogManager', 'Successfully cleared the logs table.')
+        print("--- Logs table cleared successfully ---")
+    except mysql.connector.Error as e:
+        log('ERROR', 'LogManager', 'Failed to clear the logs table.', {'error': str(e)})
+        print(f"Error clearing logs table: {e}")

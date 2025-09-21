@@ -1,76 +1,124 @@
-# LinkedIn Job Search and Analysis Agent
+# LinkedIn Job Analysis RSS Feed Agent
 
-This project implements a sophisticated agent based on LangGraph that automates the process of searching for jobs on LinkedIn, analyzing their fit against a predefined user profile, and documenting the findings.
+This project is a sophisticated Python agent that automates searching for LinkedIn jobs, analyzes them against a detailed user profile, and generates a local RSS feed with the findings. The agent runs on a schedule and logs its activities to a MySQL database.
 
 ## Features
 
-- **Automated Job Searching**: Connects to a LinkedIn MCP (Multi-Channel Proxy) server to perform job searches using a variety of queries.
-- **Dynamic Queries**: Automatically runs with a randomly selected, high-value job query if no specific query is provided.
-- **AI-Powered Analysis**: Uses a GPT model (`gpt-4o-mini`) to analyze job descriptions against a detailed user profile (`profile.json`).
-- **Markdown Newsletter Generation**: Produces a weekly-style newsletter in Markdown format, including a table that summarizes the job fit, required skills, and consultancy status.
-- **Azure DevOps Integration**: Automatically appends the generated analysis to a specified page in an Azure DevOps wiki.
-- **Configuration-Driven**: All sensitive keys, URLs, and configuration parameters are managed via a `.env` file for security and flexibility.
+- **Automated & Scheduled Job Searches**: Runs daily to find the latest job postings based on predefined queries.
+- **AI-Powered Job Analysis**: Leverages a Large Language Model (via LangGraph) to compare job descriptions against a JSON-defined user profile.
+- **Rich HTML Summaries**: Generates a visually appealing HTML card for each job, detailing the fit, matching skills, and missing skills.
+- **Local RSS Feed**: Serves the analysis results as an Atom RSS feed, accessible locally via a Flask web server.
+- **Database Logging**: Logs all agent activities, including job searches, analysis results, and errors, to a MySQL database for robust monitoring.
+- **Log Maintenance**: Automatically clears the logs table weekly to manage database size.
+- **Containerized**: Includes a `Dockerfile` for easy setup and deployment.
 
-## Project Structure
+## Tech Stack
 
-The project follows the standard application structure recommended by the LangChain documentation.
+- **Backend**: Python
+- **AI Agent Framework**: LangChain / LangGraph
+- **Web Server**: Flask
+- **Scheduling**: APScheduler
+- **Database**: MySQL
+- **Containerization**: Docker
 
-```
-AI/
-├── linkedin_agent/         # Main application package
-│   ├── mcp-client-agent.py # The main LangGraph agent implementation
-│   ├── model/              # Contains the user profile and tool configurations
-│   ├── prompts/            # Contains the prompt templates for the agent
-│   └── tools/              # Houses custom tools (e.g., for DevOps wiki interaction)
-├── .env                    # Your local environment variables (credentials, URLs)
-├── .env.example            # Template for the .env file
-├── .gitignore              # Standard Python gitignore
-├── requirements.txt        # Project dependencies
-└── ...
-```
+## How It Works
+
+The application is orchestrated by `rss_feed.py`, which serves as the main entry point.
+
+1.  **Scheduler**: `APScheduler` is configured to run two main tasks:
+    - **Daily Job Analysis**: The `update_rss_feed` function is triggered once every 48 hours. This function invokes the LangGraph agent (`mcp_client_agent.py`).
+    - **Weekly Log Cleanup**: The `clear_logs` function runs once a week (Sunday at midnight) to truncate the `logs` table in the database.
+
+2.  **LangGraph Agent**: The agent (`mcp_client_agent.py`) executes a series of steps:
+    - It picks a random job query from a predefined list.
+    - It calls an external LinkedIn service (MCP) to search for jobs.
+    - For each job found, it invokes an LLM to perform a detailed analysis against the user's `profile.json`.
+    - The analysis is formatted into a rich HTML block.
+
+3.  **RSS Feed Generation**: The collected HTML analyses are compiled into an `rss.xml` file.
+
+4.  **Flask Server**: A lightweight Flask server runs continuously to serve the generated `rss.xml` file at `http://localhost:5000/rss`.
 
 ## Setup and Installation
 
-1.  **Clone the Repository**: Clone this project to your local machine.
+### Prerequisites
 
-2.  **Create a Virtual Environment**: It is highly recommended to use a Python virtual environment.
+- Python 3.11+
+- Docker (optional, for containerized deployment)
+- A running MySQL server
 
+### Local Setup
+
+1.  **Clone the Repository**:
+    ```bash
+    git clone <repository-url>
+    cd <repository-directory>
+    ```
+
+2.  **Create and Activate a Virtual Environment**:
     ```bash
     python -m venv .ai-venv
     source .ai-venv/bin/activate
+    # On Windows, use: .\ai-venv\Scripts\activate
     ```
 
-3.  **Install Dependencies**: Install all the required packages from the `requirements.txt` file.
-
+3.  **Install Dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
 
-## Configuration
+4.  **Configure Environment Variables**:
+    - Create a `.env` file by copying the example file:
+      ```bash
+      cp .env.example .env
+      ```
+    - Edit the `.env` file with your specific credentials and configurations.
 
-1.  **Create `.env` file**: Create a `.env` file in the project root by copying the template.
+## Environment Variables
 
-    ```bash
-    cp .env.example .env
-    ```
+Your `.env` file must contain the following variables:
 
-2.  **Edit `.env` file**: Open the newly created `.env` file and fill in the placeholder values. You will need:
-    - Your **OpenAI API Key**.
-    - Your **Tavily API Key** for search functions.
-    - Your **Azure DevOps Personal Access Token (PAT)** with Wiki read/write permissions.
-    - The URL of your running **LinkedIn MCP server**.
-    - Your Azure DevOps `ORGANIZATION`, `PROJECT`, `WIKI_ID`, and the `PAGE_PATH` you want to write to.
-    - *(Optional)* Your LangSmith API keys if you wish to use LangSmith for tracing.
+- `DB_HOST`: The hostname or IP address of your MySQL server.
+- `DB_USER`: The username for your MySQL database.
+- `DB_PASSWORD`: The password for your MySQL database.
+- `DB_NAME`: The name of the database to use.
+- `MODEL_NAME`: The identifier for the language model to use (e.g., `gpt-4o-mini`).
+- `TOOL_CONFIG_PATH`: Path to the tool configuration file (e.g., `linkedin_agent/model/mcp-tool-names.json`).
+- `PROFILE_JSON_PATH`: Path to the user profile for job matching (e.g., `linkedin_agent/model/profile.json`).
+- `LINKEDIN_MCP_URL`: The URL of your running LinkedIn MCP server.
+- `OPENAI_API_KEY`: Your API key for OpenAI.
 
-## Usage
+## Running the Application
 
-To run the agent, execute the main script from the project's root directory:
+You can run the application either directly with Python or using Docker.
+
+### 1. Running Directly
+
+Ensure your virtual environment is activated and your `.env` file is configured. Then, run the Flask application:
 
 ```bash
-python linkedin_agent/mcp-client-agent.py
+python rss_feed.py
 ```
 
--   **Interactive Mode**: The script will prompt you to enter a job query. You can type any job search string you like.
--   **Automated Mode**: If you simply press `Enter` at the prompt without typing a query, the agent will automatically select a random, high-value query from the list defined in `linkedin_agent/prompts/prompts.py` and run with it.
+The server will start, and the first job analysis will run immediately. Subsequent runs will follow the defined schedule.
 
-Upon completion, the agent will print the final analysis to the console and append it to the configured Azure DevOps wiki page.
+### 2. Running with Docker
+
+1.  **Build the Docker Image**:
+    ```bash
+    docker build -t linkedin-rss-agent .
+    ```
+
+2.  **Run the Docker Container**:
+    You can pass your environment variables to the container using the `--env-file` flag.
+    ```bash
+    docker run -p 5000:5000 --env-file .env --name rss-agent-container linkedin-rss-agent
+    ```
+
+## Accessing the RSS Feed
+
+Once the application is running, the RSS feed will be available at:
+
+[http://localhost:5000/rss](http://localhost:5000/rss)
+
+You can add this URL to your favorite RSS reader to get updates.
