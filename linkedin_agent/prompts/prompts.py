@@ -14,74 +14,77 @@ jobs_query = [
     '"AI Engineer" AND (Python OR C#) AND Azure',
     '"Software Engineer" AND (LangChain OR LangGraph)',
     '"IoT Developer" AND (Azure OR Python)',
-    '"Cybersecurity" AND (OSINT OR "Threat Intelligence")',
     '"Automation Engineer" AND (AI OR Azure)',
 ]
 
-
 job_match_prompt = PromptTemplate(
-    input_variables=["profile", "jobs", "date"],
+    input_variables=["profile", "job", "date"],
     template="""
 Today is {date}.
 
-You are creating a weekly job matching newsletter for the candidate in PROFILE.  
-The newsletter should start with a short friendly introduction (2–3 sentences),  
-mentioning that it's a personalized summary of job opportunities and fit analysis.
+You are a career assistant creating a visually appealing HTML summary for a job opportunity.
+You will analyze the candidate PROFILE against the provided JOB data.
 
 PROFILE:
 {profile}
 
-JOBS:
-{jobs}
+JOB:
+{job}
 
 TASK:
-For each job in JOBS, compare its requirements/responsibilities with PROFILE.  
-Then produce a Markdown newsletter with:
+Generate a single, self-contained HTML block using inline CSS. The output must be pure HTML, with no extra text, comments, or markdown.
+The HTML should be a 'card' for the job analysis. Use the provided JSON data to fill in the placeholders (e.g., <COMPANY_NAME>).
 
-1. **Intro paragraph** (like a weekly jobs digest).
-2. **Markdown table** with the following columns (use emojis as headers):
+**Visually emphasize keywords** from the PROFILE's skills list when they appear in your analysis by wrapping them in `<strong>`.
 
-- 🏢 Company Name
-- 📝 Company Description (short semantic summary of what the company does)
-- Job Title
-- ✅/⚖️/❌ (Fit level: Strong, Medium, Weak)
-- 💪 Strong Fit Characteristics (comma-separated list)
-- ⚠️ Missing Characteristics (comma-separated list)
-- 📝 Notes (short clarification if relevant)
-- 🚨 Consultancy? (worded judgment + emoji: "Consultancy/Outsourcing 🚨", "Not Consultancy ✅", "Suspected Consultancy ❓")
-- 💰 Salary (if provided, otherwise leave blank)
-- 📍 Location
-- 🌐 Work Type (Remote / Onsite / Hybrid – if Hybrid, indicate expected days per week onsite, e.g., "Hybrid – 2 days onsite")
-- 🔗 LinkedIn (URL from PROFILE if available, otherwise leave blank)
+Here is the required HTML structure:
 
-FIT CRITERIA:
-- ✅ Strong: Candidate meets ≥70% of key requirements.
-- ⚖️ Medium: Candidate meets ~40–70% of key requirements.
-- ❌ Weak: Candidate meets <40% of key requirements.
+<div style="border: 1px solid #ddd; border-radius: 8px; margin: 16px 0; padding: 16px; font-family: sans-serif; line-height: 1.6;">
+    
+    <!-- HEADER: Company and Job Title -->
+    <h2 style="margin-top: 0; margin-bottom: 8px; font-size: 1.4em;">
+        🏢 <COMPANY_NAME> — <JOB_TITLE>
+    </h2>
+    
+    <!-- METADATA: Location, Work Type, Salary -->
+    <div style="font-size: 0.9em; color: #555; margin-bottom: 16px;">
+        <span>📍 <LOCATION></span> | 
+        <span><WORK_TYPE_EMOJI> <WORK_TYPE></span> | 
+        <span>💰 <SALARY></span>
+    </div>
 
-CONSULTANCY CHECK (semantic judgment):
-- Use the job/company description to decide:
-  - "Consultancy/Outsourcing 🚨" if the company provides consulting, outsourcing, body-leasing, or staff augmentation services.
-  - "Not Consultancy ✅" if the company is product-based or end-user organization.
-  - "Suspected Consultancy ❓" if unclear.
+    <!-- FIT ASSESSMENT: Colored box for emphasis -->
+    <div style="border-radius: 4px; padding: 12px; margin-bottom: 16px; background-color: <FIT_BG_COLOR>; color: <FIT_TEXT_COLOR>;">
+        <strong style="font-size: 1.1em;"><FIT_EMOJI> Fit: <FIT_WORD></strong>
+        <p style="margin: 8px 0 0 0;"><strong>Justification:</strong> <FIT_REASONING></p>
+    </div>
 
-WORK TYPE CHECK:
-- If the description mentions remote, hybrid, or onsite, include in 🌐 Work Type column.
-- For hybrid, try to identify how many days per week onsite. If unclear, just write "Hybrid ❓".
+    <!-- DETAILS: Skills analysis using badges -->
+    <div>
+        <p><strong>✅ Matching Skills:</strong> <MATCHING_SKILLS_AS_BADGES></p>
+        <p><strong>❌ Missing Skills:</strong> <MISSING_SKILLS_AS_BADGES></p>
+        <p><strong>📝 Notes:</strong> <NOTES></p>
+    </div>
 
-RULES:
-- Compare skills/technologies case-insensitively; treat plural/singular forms as equivalent.
-- If a requirement is partially matched, add "(partial)".
-- Always include the LinkedIn URL in each row if present in PROFILE.
-- Output only Markdown: intro paragraph + table + summary section.
-- At the end, add a **summary section** listing total jobs analyzed, and counts of Strong, Medium, Weak fits.
+    <!-- FOOTER: Consultancy, Company Info, Profile Link -->
+    <div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 16px; font-size: 0.9em; color: #555;">
+        <p style="margin: 0 0 8px 0;"><strong>Consultancy Check:</strong> <CONSULTANCY_EMOJI> <CONSULTANCY_JUDGMENT></p>
+        <p style="margin: 0;"><strong>About <COMPANY_NAME>:</strong> <COMPANY_DESCRIPTION></p>
+        <p style="margin: 8px 0 0 0;"><strong>Profile:</strong> <a href="<LINKEDIN_URL>">LinkedIn</a></p>
+    </div>
+</div>
 
-EXAMPLE SUMMARY SECTION:
-
-**Summary:**  
-Total jobs analyzed: 5  
-✅ Strong fit: 2  
-⚖️ Medium fit: 2  
-❌ Weak fit: 1
+--- MANDATORY RULES ---
+1.  **Output ONLY the HTML card.** No extra text, comments, or markdown.
+2.  **Fill all placeholders.** If a value is missing from the JSON, use "Not specified".
+3.  **Fit Assessment & Colors:**
+    - **Strong Fit (>=70% match):** Use ✅, "Strong", `background-color: #e8f5e9;`, `color: #2e7d32;`.
+    - **Medium Fit (~40-70% match):** Use ⚖️, "Medium", `background-color: #fff3e0;`, `color: #f57c00;`.
+    - **Weak Fit (<40% match):** Use ❌, "Weak", `background-color: #ffebee;`, `color: #c62828;`.
+4.  **Skills as Badges:** Format every skill in <MATCHING_SKILLS_AS_BADGES> and <MISSING_SKILLS_AS_BADGES> as a styled span.
+    - **Example:** `<span style="background-color: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; display: inline-block; margin: 2px;">Python</span>`
+5.  **Consultancy Check:** Use the appropriate emoji: 🚨 (Consultancy), ✅ (Not Consultancy), ❓ (Suspected).
+6.  **Work Type:** Use an appropriate emoji: 🏢 (Onsite), 🏠 (Remote), 🔄 (Hybrid). For Hybrid, specify days if known (e.g., "Hybrid – 3 days onsite").
+7.  **Keyword Emphasis:** In the <NOTES>, <FIT_REASONING>, and <COMPANY_DESCRIPTION> sections, wrap any skills that match the candidate's PROFILE in `<strong>` tags for emphasis.
 """
 )

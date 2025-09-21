@@ -100,7 +100,9 @@ def route_tool_call(state: MessagesState):
 
 async def analyze_job_matches(state: MessagesState):
     """
-    Analyzes job search results against a user profile and generates a fit summary.
+    Analyzes job search results against a user profile by iterating through each job,
+    invoking the analysis model for each one concurrently to get an HTML block,
+    and compiling the results into a single JSON array for the RSS feed.
     """
     print("\n--- Analyzing Job Matches ---")
     last_message = state["messages"][-1]
@@ -111,9 +113,14 @@ async def analyze_job_matches(state: MessagesState):
     jobs_json_str = last_message.content
     try:
         jobs_data = json.loads(jobs_json_str)
+        if not isinstance(jobs_data, list):
+            jobs_data = [jobs_data] if isinstance(jobs_data, dict) else []
     except (json.JSONDecodeError, TypeError):
-        error_content = f"I couldn't analyze the job results because I received invalid data from the search tool."
+        error_content = "I couldn't analyze the job results because I received invalid data from the search tool."
         return {"messages": [AIMessage(content=error_content)]}
+
+    if not jobs_data:
+        return {"messages": [AIMessage(content="No valid jobs found to analyze.")]}
 
     # Load user profile
     try:
@@ -124,26 +131,45 @@ async def analyze_job_matches(state: MessagesState):
     except json.JSONDecodeError:
         return {"messages": [AIMessage(content=f"Error: I couldn't read your profile file at {PROFILE_JSON_PATH}.")]}
 
-    # Get today's date in a nice format (e.g., September 20, 2025)
     today = datetime.today().strftime("%B %d, %Y")
-
-    # Prepare the prompt
-    formatted_prompt = prompts.job_match_prompt.format(
-        profile=json.dumps(profile_data, indent=2),
-        jobs=json.dumps(jobs_data, indent=2),
-        date=today
-    )
-
-    # Invoke a clean model for the analysis task
     analysis_model = init_chat_model(MODEL_NAME)
-    response = await analysis_model.ainvoke(formatted_prompt)
+    compiled_responses = []
+    
+    analysis_tasks = []
+    for job in jobs_data:
+        formatted_prompt = prompts.job_match_prompt.format(
+            profile=json.dumps(profile_data, indent=2),
+            job=json.dumps(job, indent=2),
+            date=today
+        )
+        analysis_tasks.append(analysis_model.ainvoke(formatted_prompt))
 
-    # The model should return a JSON string. We pass this to the next step.
-    # The final response to the user will be formatted by the main model.
-    analysis_result_message = AIMessage(
-        content=f"Here is the job match analysis based on your profile:\n{response.content}"
-    )
+    print(f"--- Starting analysis of {len(analysis_tasks)} jobs concurrently ---")
+    analysis_results = await asyncio.gather(*analysis_tasks, return_exceptions=True)
 
+    for i, result in enumerate(analysis_results):
+        job = jobs_data[i]
+        company_name = job.get('company', 'Unknown Company')
+        job_title = job.get('job_title', 'N/A')
+        job_identifier = f"{job_title} at {company_name}"
+        
+        html_content = ""
+        
+        if isinstance(result, Exception):
+            print(f"--- Error analyzing job: {job_identifier} ---")
+            print(f"Exception: {result}")
+            html_content = f"<h2>Error analyzing job: {job_title}</h2><p>An exception occurred during analysis: {result}</p>"
+        else:
+            print(f"--- Successfully processed analysis for job: {job_identifier} ---")
+            html_content = result.content
+
+        compiled_responses.append({
+            "job_title": f"{job_title}",
+            "job_html": html_content
+        })
+
+    final_content = json.dumps(compiled_responses, indent=2)
+    analysis_result_message = AIMessage(content=final_content)
     return {"messages": [analysis_result_message]}
 
 
@@ -192,8 +218,8 @@ def build_graph(call_model_node, tool_node):
     return builder.compile()
 
 
-async def main():
-    """Main function to set up and run the agent."""
+async def run_agent():
+    """Runs the agent to get job analysis and returns the content."""
     # 1. Initialize model and client
     model = init_chat_model(MODEL_NAME)
     client = create_mcp_client()
@@ -211,46 +237,15 @@ async def main():
     # 4. Build the graph
     graph = build_graph(call_model, tool_node)
 
-    # 5. Get user input and run the graph
-    print("Enter your job query (or press Enter to use a default query):")
-    try:
-        user_query = input()
-        if not user_query:
-            print("Using default query...")
-            if isinstance(prompts.jobs_query, list) and prompts.jobs_query:
-                user_query = random.choice(prompts.jobs_query)
-                print(f"Randomly selected query: '{user_query}'")
-            else:
-                user_query = "AI Engineer" # Fallback in case the import fails or is not a list
-    except EOFError:
-        print("\nNo input received. Using default query...")
-        user_query = prompts.jobs_query
+    # 5. Use a default or random query
+    if isinstance(prompts.jobs_query, list) and prompts.jobs_query:
+        user_query = random.choice(prompts.jobs_query)
+    else:
+        user_query = "AI Engineer" # Fallback
 
-
-    print("\n--- Running Agent ---")
     final_state = await graph.ainvoke(
         {"messages": [{"role": "user", "content": f"search for jobs using the following query: {user_query}"}]}
     )
 
-    print("\n--- Agent Finished ---")
-    print("Final response:")
     response = final_state['messages'][-1].content
-    print(response)
-    # Get today's date in a nice format (e.g., September 20, 2025)
-    today = datetime.today().strftime("%B %d, %Y")
-
-    # Append the response to the Azure DevOps Wiki page
-    result = append_to_wiki_page(
-             content_to_append=f"\n\n# Date {today} \n {response}",
-             page_path=PAGE_PATH,
-             organization=ORGANIZATION,
-             project=PROJECT,
-             wiki_identifier=WIKI_ID)
-
-
-if __name__ == "__main__":
-    try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-        print("\nExiting...")
-        sys.exit(0)
+    return response
