@@ -97,11 +97,11 @@ if __name__ == '__main__':
     init_db()
     # --- Scheduler Setup ---
     scheduler = BackgroundScheduler()
-    # Schedule the RSS feed update to run every 48 hours
+    # Schedule the RSS feed update to run every 72 hours
     scheduler.add_job(
         update_rss_feed,
         'interval',
-        hours=48,
+        hours=72,
         jitter=36000
     )
     # Schedule the log cleanup to run once a week (e.g., every Sunday at midnight)
