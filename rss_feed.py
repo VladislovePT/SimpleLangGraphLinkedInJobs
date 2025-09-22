@@ -10,11 +10,45 @@ from datetime import datetime
 import pytz
 from apscheduler.schedulers.background import BackgroundScheduler
 
-from linkedin_agent.mcp_client_agent import run_agent
+from linkedin_agent.mcp_client_agent import run_agent, create_mcp_client
 from linkedin_agent.utils.mysql_logger import init_db, log, clear_logs
 
 app = Flask(__name__)
 RSS_FILE = "rss.xml"
+
+
+async def pre_run_checks():
+    """
+    Performs pre-run checks for essential services like the database and MCP server.
+    Exits the application if a check fails.
+    """
+    print("--- Performing pre-run connectivity checks ---")
+    
+    # 1. Check SQL DB connection
+    try:
+        print("Checking database connection...")
+        init_db()  # This will implicitly check the connection by initializing
+        print("Database connection successful.")
+        log('INFO', 'PreRunCheck', 'Database connection successful.')
+    except Exception as e:
+        print(f"FATAL: Database connection failed: {e}", file=sys.stderr)
+        # We can't log to DB if it's down, so we just print and exit.
+        sys.exit(1)
+
+    # 2. Check MCP Server connection
+    try:
+        print("Checking MCP server connection...")
+        client = create_mcp_client()
+        await client.get_tools()  # This will fail if the server is unreachable
+        print("MCP server connection successful.")
+        log('INFO', 'PreRunCheck', 'MCP server connection successful.')
+    except Exception as e:
+        print(f"FATAL: MCP server connection failed: {e}", file=sys.stderr)
+        log('CRITICAL', 'PreRunCheck', 'MCP server connection failed.', {'error': str(e)})
+        sys.exit(1)
+        
+    print("--- All connectivity checks passed ---")
+
 
 def update_rss_feed():
     """
@@ -93,8 +127,15 @@ def rss_feed():
 
 
 if __name__ == '__main__':
-    # --- Database Logger Setup ---
-    init_db()
+    # --- Perform pre-run checks first ---
+    # We need an event loop to run the async check function
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    loop.run_until_complete(pre_run_checks())
+    loop.close()
+    
+    # init_db() is now called inside pre_run_checks()
+
     # --- Scheduler Setup ---
     scheduler = BackgroundScheduler()
     # Schedule the RSS feed update to run every 72 hours

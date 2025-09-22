@@ -1,25 +1,168 @@
 {
-  "Programming & Scripting": ["Python", "C#", "JavaScript", "Java", "SQL", "KQL", "Bash", "Shell"],
-  "Frameworks & APIs": ["FastAPI", ".NET", "Node.js", "REST", "GraphQL", "CefSharp"],
-  "Databases": ["MySQL", "SQL Databases", "CosmosDB", "Qdrant"],
-  "Cloud & DevOps": [
-    "Azure", "Azure Storage", "Function Apps", "Logic Apps", "Container Apps", "Application Insights", "Azure Data Explorer",
-    "Power BI", "Power Automate", "Azure DevOps",
-    "Azure Resource Manager", "ARM Templates", "Monitoring", "CI/CD"
-  ],
-  "AI Tools": ["Semantic Kernel", "LangChain", "LangGraph", "LangSmith", "AI Foundry"],
-  "Azure AI Services": [
-    "Cognitive Services", "OpenAI", "AI Search", "Vision", "Speech", "Document Intelligence",
-    "Bot Framework", "Bot Service", "AI Inference SDK",
-    "Azure Machine Learning", "Knowledge Mining", "Language Understanding (LUIS)", "Conversational AI"
-  ],
-  "Azure IoT": [
-    "IoT Hub", "Device Provisioning Service", "IoT Edge", "Event Hub", "Event Grid", "Stream Analytics"
-  ],
-  "IoT Protocols": ["AMQP", "MQTT", "Modbus"],
-  "Automation & Workflow": ["n8n", "workflow automation", "diagnostic tools", "self-healing workflows"],
-  "Research & Algorithms": ["A* pathfinding", "Genetic Algorithms", "KNN", "K-Means", "Clustering"],
-  "Cybersecurity & Forensics": ["Cybersecurity", "Computer Forensics", "OSINT", "information gathering", "reporting", "modular architecture", "threat intelligence"],
+  "Programming & Scripting": {
+    "Expert": [
+      "Python",
+      "C#",
+      "SQL"
+    ],
+    "Proficient": [
+      "Java",
+      "Bash",
+      "KQL",
+      "Shell"
+    ],
+    "Intermediate": [
+      "JavaScript"
+    ]
+  },
+  "Frameworks & APIs": {
+    "Expert": [
+      ".NET"
+    ],
+    "Proficient": [
+      "FastAPI",
+      "REST",
+      "Docker"
+    ],
+    "Intermediate": [
+      "Node.js",
+      "CefSharp",
+      "GraphQL"
+    ]
+  },
+  "Databases": {
+    "Expert": [
+      "CosmosDB",
+      "SQL Databases",
+      "Qdrant",
+      "MySQL"
+    ],
+    "Proficient": [],
+    "Intermediate": []
+  },
+  "Cloud & DevOps": {
+    "Expert": [
+      "Azure",
+      "Azure Function Apps",
+      "Azure Logic Apps",
+      "Azure Container Apps",
+      "Azure Storage",
+      "Application Insights",
+      "Monitoring"
+    ],
+    "Proficient": [
+      "Azure DevOps",
+      "CI/CD",
+      "Power BI",
+      "Power Automate",
+      "ARM Templates",
+      "Azure Data Explorer"
+    ],
+    "Intermediate": []
+  },
+  "AI Tools": {
+    "Expert": [
+      "Azure Semantic Kernel"
+    ],
+    "Proficient": [
+      "LangChain",
+      "LangGraph",
+      "LangSmith",
+      "AI Foundry"
+    ],
+    "Intermediate": []
+  },
+  "AI Concepts & Architectures": {
+    "Expert": [
+      "Generative AI",
+      "Multi-Agent Systems",
+      "Retrieval-Augmented Generation (RAG)",
+      "Conversational AI",
+      "Semantic Search",
+      "Knowledge Mining"
+    ],
+    "Proficient": [],
+    "Intermediate": [
+      "Inference Optimization",
+      "LLM Fine-Tuning"
+    ]
+  },
+  "Azure AI Services": {
+    "Expert": [
+      "OpenAI",
+      "AI Search",
+      "Cognitive Services",
+      "Bot Framework",
+      "Bot Service"
+    ],
+    "Proficient": [
+      "Language Understanding (LUIS)"
+    ],
+    "Intermediate": [
+      "AI Inference SDK",
+      "Vision",
+      "Speech",
+      "Document Intelligence",
+      "Azure Machine Learning"
+    ]
+  },
+  "Azure IoT": {
+    "Expert": [
+      "IoT Hub",
+      "IoT Edge",
+      "Device Provisioning Service",
+      "Event Hub",
+      "Event Grid",
+      "Stream Analytics"
+    ],
+    "Proficient": [],
+    "Intermediate": []
+  },
+  "IoT Protocols": {
+    "Expert": [],
+    "Proficient": [
+      "AMQP",
+      "MQTT"
+    ],
+    "Intermediate": [
+      "Modbus"
+    ]
+  },
+  "Automation & Workflow": {
+    "Expert": [
+      "workflow automation",
+      "diagnostic tools",
+      "Power Automate"
+    ],
+    "Proficient": [
+      "self-healing workflows",
+      "n8n"
+    ],
+    "Intermediate": []
+  },
+  "Research & Algorithms": {
+    "Expert": [],
+    "Proficient": [
+      "A* pathfinding",
+      "Genetic Algorithms",
+      "KNN",
+      "K-Means",
+      "Clustering"
+    ],
+    "Intermediate": []
+  },
+  "Cybersecurity & Forensics": {
+    "Expert": [],
+    "Proficient": [
+      "Cybersecurity",
+      "Computer Forensics",
+      "OSINT",
+      "threat intelligence",
+      "information gathering",
+      "reporting"
+    ],
+    "Intermediate": []
+  },
   "Certifications (Microsoft)": [
     "AI-102: Azure AI Engineer Associate (Azure AI solutions, Conversational AI, Cognitive Services, Bot Framework, AI integration)",
     "AZ-204: Azure Developer Associate (Azure Functions, Logic Apps, App Services, Azure SDKs, Event-based solutions, API management)",

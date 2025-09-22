@@ -25,6 +25,7 @@ from dotenv import load_dotenv
 import os
 
 from linkedin_agent.utils.mysql_logger import init_db, log
+from linkedin_agent.utils.render_html import render_job_card
 
 # Load environment variables from .env file
 load_dotenv()
@@ -145,7 +146,7 @@ async def analyze_job_matches(state: MessagesState):
     
     analysis_tasks = []
     for job in jobs_data:
-        formatted_prompt = prompts.job_match_prompt.format(
+        formatted_prompt = prompts.job_analysis_prompt.format(
             profile=json.dumps(profile_data, indent=2),
             job=json.dumps(job, indent=2),
             date=today
@@ -172,7 +173,10 @@ async def analyze_job_matches(state: MessagesState):
         else:
             log('INFO', 'AnalyzeJobMatches', f'Successfully processed analysis for job: {job_identifier}')
             print(f"--- Successfully processed analysis for job: {job_identifier} ---")
-            html_content = result.content
+            # The result from the LLM is a JSON string.
+            # We now pass it to the render_job_card function to get the final HTML.
+            analysis_json = result.content
+            html_content = render_job_card(analysis_json)
 
         compiled_responses.append({
             "job_title": f"{job_title}",
